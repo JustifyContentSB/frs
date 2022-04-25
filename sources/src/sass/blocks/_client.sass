@@ -1,0 +1,131 @@
+.client
+   padding-bottom: 55px
+   overflow: hidden
+   &__top
+      margin-bottom: 24px
+      color: var(--textColor)
+      &-text
+         margin-bottom: 12px
+   &__title
+      margin-bottom: 6px
+      font-size: 16px
+      line-height: 138%
+      color: #000
+   &__bottom
+      padding-left: var(--padding)
+      position: relative
+   &__ideal
+      width: 100%
+      max-width: 263px
+      padding: 27px 25px 31px
+      background: rgba(233, 233, 233, 0.5)
+      backdrop-filter: blur(10px)
+      border-radius: 30px
+      position: relative
+      z-index: 5
+      &-title
+         margin-bottom: 20px
+         font-weight: 600
+         font-size: 16px
+         line-height: 125%
+      &-info
+         margin-bottom: 20px
+         line-height: 164%
+         p
+            margin-bottom: 8px
+            &:last-child
+               margin-bottom: 0
+   &__img
+      width: 280px
+      position: absolute
+      left: 171px
+      bottom: -28px
+
+@media screen and (min-width: 768px)
+   .client
+      &__inner
+         display: flex
+      &__bottom
+         min-width: 400px
+         padding-left: 0
+
+@media screen and (min-width: 1024px)
+   .client
+      padding-bottom: 90px
+      &__top
+         max-width: 700px
+         margin: 0
+         padding: 0
+         padding-left: var(--padding)
+         padding-right: 20px
+         display: flex
+         flex-direction: column
+      &__bottom
+         min-width: 500px
+      &__title
+         font-size: 22px
+      &__info
+         margin-top: auto
+      &__ideal
+         max-width: 397px
+         padding: 41px 59px 49px 47px
+         &-title
+            font-size: 22px
+         &-info
+            margin-bottom: 26px
+            font-size: 12px
+      &__img
+         left: auto
+         right: -52px
+         bottom: -47px
+
+@media screen and (min-width: 1366px)
+   .client
+      &__inner
+         width: 100%
+         max-width: var(--maxWidth)
+         margin: 0 auto
+      &__top
+         padding-right: 28px
+      &__title
+         margin-bottom: 16px
+      &__info
+         padding-right: 18px
+      &__ideal
+         padding-bottom: 42px
+         &-info
+            margin-bottom: 34px
+            p
+               margin-bottom: 10px
+      &__img
+         width: 351px
+         right: -125px
+         bottom: -44px
+
+@media screen and (min-width: 1600px)
+   .client
+      margin-bottom: 16px
+      &__top
+         max-width: 744px
+      &__title
+         font-size: 24px
+      &__info
+         margin-top: 30px
+      &__ideal
+         max-width: 464px
+         padding: 41px 86px 49px 45px
+         &-title
+            margin-bottom: 27px
+            font-size: 24px
+         &-info
+            margin-bottom: 46px
+            font-size: 13px
+            line-height: 154%
+            p
+               margin-bottom: 18px
+         &-link
+            padding: 17px 30px
+            font-size: 15px
+      &__img
+         width: 423px
+         right: -166px

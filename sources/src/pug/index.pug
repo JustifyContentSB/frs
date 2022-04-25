@@ -1,0 +1,128 @@
+extends base/_layout
+block head
+    title Главная
+block page
+    section.finance
+        .finance__inner
+            .finance__slider
+                .finance__slider-container
+                    .swiper-wrapper
+                        .finance__slide.swiper-slide
+                            .finance__img
+                                picture
+                                    source(srcset="images/finance/finance-desk.webp" media="(min-width: 1600px)" type="image/webp")
+                                    source(srcset="images/finance/finance-desk.jpg" media="(min-width: 1600px)" type="image/jpeg")
+                                    source(srcset="images/finance/finance-tab.webp" media="(min-width: 1024px)" type="image/webp")
+                                    source(srcset="images/finance/finance-tab.jpg" media="(min-width: 1024px)" type="image/jpeg")
+                                    source(srcset="images/finance/finance-desk.webp" media="(min-width: 768px)" type="image/webp")
+                                    source(srcset="images/finance/finance-desk.jpg" media="(min-width: 768px)" type="image/jpeg")
+                                    source(srcset="images/finance/finance-mob.webp" type="image/webp")
+                                    img(src="images/finance/finance-mob.jpg" alt="картинка" width="360" height="159")
+                            .finance__info.container
+                                h2.finance__title Рефинансирование #[br] под залог недвижимости
+                                p.finance__percent 5,85%
+                                p.finance__text.
+                                    Квартира, комната, дом, таунхаус, коммерческая недвижимость, земля. Получение положительного решения за один день по двум документам. Лучшие условия в этой сфере на финансовом рынке
+                                a.finance__link.link(href="#") Оставить заявку
+                        .finance__slide.swiper-slide
+                            .finance__img
+                                picture
+                                    source(srcset="images/finance/finance-desk.webp" media="(min-width: 768px)" type="image/webp")
+                                    source(srcset="images/finance/finance-desk.jpg" media="(min-width: 768px)" type="image/jpeg")
+                                    source(srcset="images/finance/finance-mob.webp" type="image/webp")
+                                    img(src="images/finance/finance-mob.jpg" alt="картинка" width="360" height="159")
+                            .finance__info.container
+                                h2.finance__title Рефинансирование под залог недвижимости
+                                p.finance__percent 5,85%
+                                p.finance__text.
+                                    Квартира, комната, дом, таунхаус, коммерческая недвижимость, земля. Получение положительного решения за один день по двум документам. Лучшие условия в этой сфере на финансовом рынке
+                                a.finance__link.link(href="#") Оставить заявку
+                button.finance__toggle.finance__toggle-prev.swiper-button-prev
+                    svg
+                        use(href="images/sprites/main.stack.svg#svg-prev")
+                button.finance__toggle.finance__toggle-next.swiper-button-next
+                    svg
+                        use(href="images/sprites/main.stack.svg#svg-next")
+            
+
+    section.credit
+        h2.visually-hidden Виды кредитов
+        .credit__inner.container
+            ul.credit__list
+                li.credit__item
+                    h3.credit__title Кредит под залог имущества
+                    p.credit__limit от 500 тыс. до 100 млн. рублей
+                    p.credit__rate Ставка от 9,2 %
+                li.credit__item
+                    h3.credit__title Кредит под залог имущества
+                    p.credit__limit от 500 тыс. до 100 млн. рублей
+                    p.credit__rate Ставка от 9,2 %
+                li.credit__item
+                    h3.credit__title Кредит под залог имущества
+                    p.credit__limit от 500 тыс. до 100 млн. рублей
+                    p.credit__rate Ставка от 9,2 %
+                li.credit__item
+                    h3.credit__title Кредит под залог имущества
+                    p.credit__limit от 500 тыс. до 100 млн. рублей
+                    p.credit__rate Ставка от 9,2 %
+
+    section.client
+        .client__inner
+            .client__top.container
+                p.client__top-text.
+                    Компания ООО «Финансовые решения и сервис» уже более 10 лет оказывает профессиональные консалтинговые услуги в сфере ипотечного и залогового кредитования. За этот период нам удалось выстроить партнерские отношения со всеми основными участниками рынка: банками, инвесторами, риелторами, страховыми и оценочными компаниями. Обращаясь к нам Вы можете быть уверены, что получите самые выгодные условия.
+                .client__info
+                    h2.client__title На стороне клиента
+                    p.
+                        Мы дорожим нашими клиентами и всегда подходим к каждому обращению индивидуально. Независимо от того, какие документы Вы можете предоставить, какой у Вас доход – мы найдем достойное решение Ваших проблем. Мы ускоряем процесс сбора, подготовки и подачи документов. Благодаря личным связям ускоряем процесс рассмотрения и одобрения кредита.
+            .client__bottom
+                .client__ideal
+                    h2.client__ideal-title Идеальные условия #[br] для получения кредита
+                    .client__ideal-info
+                        p.
+                            Всего 2 документа: паспорт и второй документ, подтвержающий личность
+                        p.
+                            Решение по кредиту вы сможете получить уже через 15 минут!
+                        p.
+                            Выдача денег в день подписания кредитного договора наличными или на счет в банке
+                    a.client__ideal-link.link(href="#") Получить кредит
+                img.client__img(src="images/client/heart.png" alt="сердечко" width="280" height="280")
+
+    section.business
+        .business__inner
+            .business__bg.background-image
+                picture
+                    source(srcset="images/business/business-desk.webp" media="(min-width: 500px)" type="image/webp")
+                    source(srcset="images/business/business-desk.jpg" media="(min-width: 500px)" type="image/jpeg")
+                    source(srcset="images/business/business-mob.webp" type="image/webp")
+                    img(src="images/business/business-mob.jpg" alt="картинка" width="360" height="234")
+            .business__info
+                h2.business__title Кредит для бизнеса
+                p.business__text.
+                    Мы точно знаем на что будут обращать внимание кредиторы при рассмотрении вашей заявки. Работая с нами Вы значительно увеличиваете шансы на получение Положительного решения.
+                a.business__btn(href="#") Подробнее
+
+    .history-wrapper
+        section.history
+            .history__inner.container
+                ul.history__list
+                    li.history__item
+                        h2.history__title Кредитная история
+                        p.history__text.
+                            В случае необходимости мы предоставляем нашим клиентам информацию по уровню их кредитного рейтинга, данный подход используется при «скоринговых» моделях определения платежеспособности и очень распространён в потребительском кредитовании.
+                        a.history__link(href="#") Подробнее
+                    li.history__item
+                        h2.history__title Кредитная история
+                        p.history__text.
+                            В случае необходимости мы предоставляем нашим клиентам информацию по уровню их кредитного рейтинга, данный подход используется при «скоринговых» моделях определения платежеспособности и очень распространён в потребительском кредитовании.
+                        a.history__link(href="#") Подробнее
+
+        section.mortgage
+            .mortgage__inner.container
+                .mortgage__info
+                    .mortgage__about
+                        h2.mortgage__title Ипотека
+                        p.mortgage__text.
+                            Благодаря нашим партнерским отношениям с банками и льготным условиям кредитования для наших клиентов, мы можем предложить Вам самые низкие ставки на рынке, а так же рассмотреть сразу несколько вариантов на выбор.
+                        a.link(href="#") Оформить ипотеку
+                    img.mortgage__img(src="images/mortgage/mortgage.png" alt="доллар" width="218")

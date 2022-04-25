@@ -1,0 +1,84 @@
+.mortgage
+   margin-bottom: 24px
+   &__info
+      min-height: 225px
+      padding: 20px 100px 34px 24px
+      background: #D7D0B6
+      border-radius: 3px
+      overflow: hidden
+      position: relative
+   &__about
+      position: relative
+      z-index: 5
+   &__img
+      position: absolute
+      right: -73px
+      bottom: -28px
+   &__title
+      margin-bottom: 14px
+      font-weight: 800
+      font-size: 26px
+      line-height: 120%
+      color: #fff
+      text-transform: uppercase
+   &__text
+      margin-bottom: 16px
+      font-weight: 300
+      font-size: 12px
+      line-height: 150%
+
+@media screen and (min-width: 600px)
+   .mortgage
+      &__info
+         padding-right: 200px
+      &__img
+         right: 0
+         top: 50%
+         transform: translateY(-50%)
+
+@media screen and (min-width: 1024px)
+   .mortgage
+      margin-bottom: var(--margin)
+      &__info
+         min-height: 229px
+         padding: 34px 200px 36px 40px
+      &__title
+         font-size: 30px
+      &__text
+         max-width: 615px
+         font-size: 14px
+         line-height: 129%
+      &__img
+         width: 191px
+         right: 30px
+
+@media screen and (min-width: 1366px)
+   .mortgage
+      &__inner
+         height: 100%
+      &__info
+         height: 100%
+         padding: 30px 220px 36px 40px
+      &__title
+         margin-bottom: 14px
+      &__text
+         margin-bottom: 12px
+         font-size: 12px
+         line-height: 150%
+      &__img
+         width: 234px
+         right: 7px
+
+@media screen and (min-width: 1600px)
+   .mortgage
+      &__title
+         margin-bottom: 10px
+         font-size: 34px
+      &__text
+         font-size: 14px
+      &__info
+         padding-right: 255px
+         padding-left: 43px
+      &__img
+         width: 250px
+         right: 18px

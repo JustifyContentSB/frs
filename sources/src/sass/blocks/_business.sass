@@ -1,0 +1,93 @@
+.business
+   margin-bottom: 24px
+   color: #fff
+   &__inner
+      min-height: 234px
+      padding: 24px 24px 30px 34px
+      border-radius: 0px 0px 50px 0px
+      background: var(--textColor)
+      overflow: hidden
+      position: relative
+      &::before
+         content: ''
+         position: absolute
+         z-index: 1
+         left: 0
+         top: 0
+         bottom: 0
+         width: 10px
+         background: var(--accent)
+   &__info
+      font-weight: 500
+      font-size: 11px
+      line-height: 127%
+      position: relative
+      z-index: 5
+   &__title
+      margin-bottom: 18px
+      font-weight: 800
+      font-size: 22px
+      line-height: 100%
+   &__text
+      max-width: 196px
+      margin-bottom: 17px
+   &__btn
+      padding: 12px 20px
+      font-weight: 600
+      font-size: 12px
+      line-height: 100%
+      text-align: center
+      border: 1px solid #fff
+      border-radius: 3px
+
+@media screen and (min-width: 768px)
+   .business
+      &__info
+         font-size: 12px
+      &__text
+         max-width: 300px
+
+@media screen and (min-width: 1024px)
+   .business
+      padding: 0 var(--padding)
+      margin-bottom: var(--margin)
+      &__inner
+         min-height: 280px
+         padding: 45px 60px
+         display: flex
+         align-items: center
+      &__title
+         margin-bottom: 24px
+         font-size: 32px
+         line-height: 120%
+      &__text
+         max-width: 588px
+         margin-bottom: 30px
+         font-size: 14px
+         line-height: 143%
+
+@media screen and (min-width: 1366px)
+   .business
+      max-width: var(--maxWidth)
+      margin: 0 auto
+      margin-bottom: var(--margin)
+      &__inner
+         min-height: 320px
+         padding: 45px 72px
+      &__title
+         margin-bottom: 20px
+
+@media screen and (min-width: 1600px)
+   .business
+      &__inner
+         min-height: 398px
+         padding: 45px 78px
+      &__title
+         margin-bottom: 30px
+         font-size: 42px
+      &__text
+         margin-bottom: 68px
+         font-size: 17px
+      &__btn
+         padding: 14px 30px
+         font-size: 15px
