@@ -1,0 +1,163 @@
+.detail
+   margin-bottom: 24px
+   &__item
+      margin-bottom: 24px
+      padding: 24px 135px 20px 24px
+      background: var(--bgColor)
+      border-radius: 3px
+      position: relative
+   &__info
+      width: 100%
+      max-width: 214px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      position: relative
+      z-index: 10
+   &__title
+      margin-bottom: 10px
+      font-weight: 700
+      font-size: 16px
+      line-height: 125%
+   &__text
+      font-weight: 400
+      font-size: 11px
+      line-height: 127%
+      color: var(--textColor)
+   &__img
+      position: absolute
+      right: 0
+      bottom: 0
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: flex-end
+   &__lead
+      margin-bottom: 10px
+   &__phone
+      margin-bottom: 10px
+      font-weight: 700
+      font-size: 16px
+      line-height: 125%
+   &__call
+      padding: 11px 20px
+      font-weight: 600
+      font-size: 12px
+      line-height: 100%
+      color: var(--textColor)
+      border: 1px solid var(--textColor)
+      border-radius: 3px
+   &__more
+      font-weight: 300
+      font-size: 12px
+      line-height: 150%
+      color: var(--textColor)
+      p
+         margin-bottom: 14px
+         &:last-child
+            margin-bottom: 0
+
+@media screen and (min-width: 768px)
+   .detail
+      &__list
+         display: flex
+         padding: 0 var(--padding)
+      &__item
+         margin-right: 24px
+         width: calc(50% - 12px)
+         &:nth-child(2n)
+            margin-right: 0
+      &__img
+         width: 150px
+         img
+            width: 100%
+
+@media screen and (min-width: 1024px)
+   .detail
+      margin-bottom: 40px
+      &__inner
+         max-width: var(--maxWidth)
+         margin: 0 auto
+      &__list
+         margin-bottom: 20px
+      &__item
+         width: calc(50% - 10px)
+         margin-right: 20px
+         margin-bottom: 20px
+         padding: 20px 135px 29px 24px
+      &__info
+         max-width: 266px
+         &--hand
+            max-width: 224px
+      &__title
+         margin-bottom: 20px
+         font-size: 20px
+         line-height: 120%
+      &__text
+         font-size: 14px
+         line-height: 143%
+      &__img
+         width: 200px
+      &__lead
+         margin-bottom: 28px
+      &__phone
+         margin-bottom: 30px
+         font-size: 20px
+         line-height: 120%
+      &__more
+         font-size: 14px
+         line-height: 143%
+
+@media screen and (min-width: 1366px)
+   .detail
+      &__item
+         min-height: 228px
+         padding: 30px 135px 30px 43px
+      &__info
+         max-width: 376px
+         &--hand
+            max-width: 340px
+      &__title
+         font-size: 26px
+         line-height: 162%
+         br
+            display: none
+      &__img
+         width: 224px
+      &__lead
+         margin-bottom: 20px
+      &__phone
+         margin-bottom: 22px
+         font-size: 26px
+         line-height: 162%
+      &__call
+         padding: 14px 30px
+         font-size: 15px
+
+@media screen and (min-width: 1600px)
+   .detail
+      margin-bottom: 80px
+      &__item
+         min-height: 264px
+         padding: 47px 135px 30px 50px
+      &__info
+         max-width: 425px
+         &--hand
+            max-width: 315px
+      &__title
+         font-size: 36px
+         line-height: 120%
+      &__text
+         font-size: 16px
+         line-height: 150%
+      &__img
+         width: 270px
+      &__lead
+         margin-bottom: 15px
+      &__phone
+         font-size: 28px
+      &__list
+         margin-bottom: 60px
+      &__more
+         font-size: 16px
+         line-height: 162%

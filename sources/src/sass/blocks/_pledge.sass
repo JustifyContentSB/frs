@@ -1,0 +1,94 @@
+.pledge
+   margin-bottom: 30px
+   &__title
+      margin-bottom: 24px
+      font-weight: 700
+      font-size: 18px
+      line-height: 122%
+   &__item
+      margin-bottom: 10px
+      padding: 14px 12px
+      border: 1px solid #EDEDED
+      border-radius: 3px
+      display: flex
+      align-items: flex-start
+      &:last-child
+         margin-bottom: 0
+   &__icon
+      width: 24px
+      min-width: 24px
+      height: 24px
+      margin-right: 16px
+   &__name
+      margin-bottom: 8px
+      font-weight: 600
+      font-size: 12px
+      line-height: 117%
+   &__text
+      font-weight: 400
+      font-size: 10px
+      line-height: 140%
+      color: var(--textColor)
+
+@media screen and (min-width: 768px)
+   .pledge
+      &__list
+         display: grid
+         grid-template-columns: 1fr 1fr
+         grid-gap: 10px
+      &__item
+         margin: 0
+
+@media screen and (min-width: 1024px)
+   .pledge
+      margin-bottom: 40px
+      &__box
+         padding: 28px 35px
+         border: 5px solid var(--bgColor)
+         border-radius: 3px
+      &__list
+         grid-gap: 20px
+
+@media screen and (min-width: 1366px)
+   .pledge
+      &__box
+         padding: 34px 42px
+      &__title
+         font-size: 20px
+         line-height: 200%
+      &__item
+         min-height: 115px
+         padding: 24px 20px
+      &__icon
+         width: 34px
+         min-width: 34px
+         height: 34px
+         img
+            width: 100%
+      &__name
+         margin-bottom: 10px
+         font-size: 14px
+      &__text
+         font-size: 12px
+         line-height: 167%
+
+@media screen and (min-width: 1600px)
+   .pledge
+      margin-bottom: 74px
+      &__box
+         padding: 60px 63px
+      &__item
+         min-height: auto
+      &__title
+         margin-bottom: 40px
+         font-size: 22px
+         line-height: 180%
+      &__icon
+         width: 44px
+         min-width: 44px
+         height: 44px
+      &__name
+         font-size: 16px
+      &__text
+         font-size: 13px
+         line-height: 154%

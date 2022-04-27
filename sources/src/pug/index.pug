@@ -1,6 +1,76 @@
 extends base/_layout
 block head
     title Главная
+block header
+    header.header.header--without
+        .header__lead
+            p.header__lead-text.container.
+                ООО «Финансовые решения и сервис» уже более 10 лет оказывает профессиональные консалтинговые услуги в сфере ипотечного и залогового кредитования.
+        .header__inner.container
+            .header__left
+                button.header__burger.btn
+                    span
+                    span
+                    span
+                a.header__logo(href="#")
+                    img(src="images/icons/logo.svg" alt="логотип" width="90" height="24")
+                    p Финансовые #[br]  решения и бизнес
+            .header__right
+                .header__info
+                    .header__contacts
+                        .header__contacts-left
+                            a.header__contacts-tel(href="tel:+74950213931")
+                                span.header__contacts-tel__icon
+                                    svg
+                                        use(href="images/sprites/main.stack.svg#svg-tel")
+                                span +7 (495) 021-39-31
+                            p.header__contacts-time Ежедневно с 10:00 до 21:00
+                        .header__contacts-right
+                            a.header__contacts-location(href="#")
+                                span.header__contacts-location__icon
+                                    svg
+                                        use(href="images/sprites/main.stack.svg#svg-city")
+                                span Москва, Ленинградский проспект, 36с30
+                    .header__user
+                        a.header__btn.header__btn--tel.btn(href="tel:+74950213931")
+                            span.header__btn-text Обратный звонок
+                            svg
+                                use(href="images/sprites/main.stack.svg#svg-tel")
+                        a.header__btn.btn(href="mailto:mail@mail.ru")
+                            span.header__btn-text Оставить заявку
+                            svg
+                                use(href="images/sprites/main.stack.svg#svg-email")
+                .header__bottom
+                    ul.header__menu
+                        li.header__menu-item
+                            a.header__menu-toggle(href="#") Главная
+                        li.header__menu-item
+                            a.header__menu-toggle(href="#") Наши услуги
+                            ul.header__menu-submenu
+                                li
+                                    a(href="#") Кредит под залог
+                                li
+                                    a(href="#") Кредит для бизнеса
+                                li
+                                    a(href="#") Ипотека
+                                li
+                                    a(href="#") Кредит на любые цели
+                                li
+                                    a(href="#") Потребительские кредиты
+                                li
+                                    a(href="#") Рефинансирование / Перекредитование
+                        li.header__menu-item
+                            a.header__menu-toggle(href="#") Вакансии
+                        li.header__menu-item
+                            a.header__menu-toggle(href="#") Контакты
+                        li.header__menu-item
+                            a.header__menu-toggle(href="#") Специальные предложения
+                    ul.header__bottom-contacts
+                        li
+                            a.link.header__bottom-contacts--tel(href="tel:+74950213931") Обратный звонок
+                        li
+                            a.link(href="#") Оставить заявку
+
 block page
     section.finance
         .finance__inner
@@ -43,7 +113,7 @@ block page
                 button.finance__toggle.finance__toggle-next.swiper-button-next
                     svg
                         use(href="images/sprites/main.stack.svg#svg-next")
-            
+
 
     section.credit
         h2.visually-hidden Виды кредитов

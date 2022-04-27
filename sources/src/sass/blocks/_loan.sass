@@ -1,0 +1,103 @@
+.loan
+   margin-bottom: 14px
+   &__title
+      margin-bottom: 14px
+   &__info
+      max-width: 220px
+   &__box
+      padding: 14px 120px 18px 20px
+      background: var(--bgColor)
+      border-radius: 3px
+      position: relative
+      overflow: hidden
+   &__text
+      margin-bottom: 10px
+      font-weight: 300
+      font-size: 12px
+      line-height: 133%
+      color: var(--textColor)
+   &__online
+      font-weight: 300
+      font-size: 15px
+      line-height: 140%
+      b
+         font-weight: 700
+   &__img
+      width: 155px
+      overflow: hidden
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      img
+         max-width: none
+         width: 279px
+   &__link
+      display: none
+
+@media screen and (min-width: 600px)
+   .loan
+      &__img
+         width: 275px
+
+@media screen and (min-width: 1024px)
+   .loan
+      margin-bottom: 20px
+      &__inner
+         max-width: var(--maxWidth)
+         margin: 0 auto
+         padding: 0 var(--padding)
+      &__header
+         padding: 0
+      &__title
+         margin-bottom: 24px
+      &__info
+         max-width: 630px
+      &__box
+         min-height: 232px
+         padding: 33px 285px 33px 36px
+      &__text
+         margin-bottom: 17px
+         font-size: 14px
+         line-height: 157%
+      &__online
+         margin-bottom: 30px
+         font-size: 20px
+         line-height: 140%
+         br
+            display: none
+      &__link
+         padding: 15px 30px
+         display: inline-block
+         font-size: 15px
+      &__img
+         width: 357px
+         img
+            width: 100%
+
+@media screen and (min-width: 1366px)
+   .loan
+      &__box
+         padding: 40px 285px 44px 52px
+      &__text
+         margin-bottom: 24px
+         font-size: 16px
+         line-height: 150%
+      &__img
+         width: 460px
+
+@media screen and (min-width: 1600px)
+   .loan
+      &__title
+         margin-bottom: 36px
+      &__box
+         min-height: 400px
+         padding: 74px 285px 75px 68px
+      &__text
+         margin-bottom: 30px
+         font-size: 20px
+         line-height: 140%
+      &__online
+         margin-bottom: 65px
+      &__img
+         width: 600px

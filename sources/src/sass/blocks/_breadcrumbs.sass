@@ -1,0 +1,43 @@
+.breadcrumbs
+   &__inner
+      max-width: var(--maxWidth)
+      margin: 0 auto
+      padding-top: 20px
+      padding-bottom: 12px
+   &__list
+      min-height: 14px
+      padding-left: var(--padding)
+      display: flex
+      overflow-x: auto
+      font-weight: 400
+      font-size: 11px
+      line-height: 109%
+      color: #878787
+      &::-webkit-scrollbar
+         width: 0
+         height: 0
+   &__item
+      padding-right: 24px
+      margin-right: 12px
+      position: relative
+      &::after
+         content: ''
+         position: absolute
+         right: 0
+         top: 0
+         width: 12px
+         height: 12px
+         background: url('../images/icons/arrow-right.svg') no-repeat center / contain
+      &:last-child
+         padding-right: 0
+         margin-right: 0
+         &::after
+            display: none
+      &--active
+         font-weight: 500
+         color: var(--textColor)
+
+@media screen and (min-width: 1024px)
+   .breadcrumbs
+      &__inner
+         padding: 20px 0

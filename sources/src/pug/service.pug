@@ -1,0 +1,248 @@
+extends base/_layout
+block head
+   title Сервис
+block page
+   section.breadcrumbs
+      .breadcrumbs__inner
+         h2.visually-hidden Навигационная цепочка сайта
+         ul.breadcrumbs__list
+            li.breadcrumbs__item
+               a(href="#") Главная
+            li.breadcrumbs__item.breadcrumbs__item--active
+               a(href="#") Кредит под залог недвижимости
+
+   section.loan
+      .loan__inner
+         header.loan__header.container
+            h1.loan__title.title Кредит под залог недвижимости
+         .loan__box
+            .loan__info
+               p.loan__text.
+                  Вы получите решение без приезда в офис. Мы вышлем вам расчет кредита, где будут указаны ставка по кредиту, срок кредита и ежемесячный платеж.
+               p.loan__online.
+                  Предварительное #[br] одобрение за 15 минут — #[b Онлайн]
+               a.loan__link.link(href="#") Оставить заявку
+            .loan__img
+               img(src="images/loan/loan.png" alt="картинка")
+
+   section.features
+      .features__inner
+         .features__list
+            .swiper-wrapper
+               .features__item.swiper-slide
+                  .features__icon
+                     img(src="images/icons/features.svg" alt="иконка" width="32" height="32")
+                  .features__info
+                     h2.features__title Лучшие условия для быстрого получения кредита
+                     p.
+                        Мы предлагаем лучшие условия на рынке кредитования и гарантируем быстрое принятие решения.
+               .features__item.swiper-slide
+                  .features__icon
+                     img(src="images/icons/features.svg" alt="иконка" width="32" height="32")
+                  .features__info
+                     h2.features__title Сэкономьте на процентах серьезную сумму для вашей выгоды
+                     p.
+                        Оформите кредит дешевле и комфортнее для вас. По минимальной процентной ставке.
+               .features__item.swiper-slide
+                  .features__icon
+                     img(src="images/icons/features.svg" alt="иконка" width="32" height="32")
+                  .features__info
+                     h2.features__title Благодаря нам тысячи людей уже получили кредиты
+                     p.
+                        Нашим клиентам было одобрен 28.400 кредитов на общую сумму 2 млрд. 300 млн. 650 тыс. рублей!
+               .features__item.swiper-slide
+                  .features__icon
+                     img(src="images/icons/features.svg" alt="иконка" width="32" height="32")
+                  .features__info
+                     h2.features__title Опыт всегда важен, особенно в кредитной сфере
+                     p.
+                        Огромный опыт, накопленный за более чем 10 лет позволяет решать самые сложные задачи.
+
+   section.detail
+      .detail__inner
+         ul.detail__list
+            li.detail__item
+               .detail__info
+                  h2.detail__title Решение в день #[br] обращения
+                  p.detail__text.
+                     Выдача денег в день подписания кредитного договора наличными или на счет в банке.
+               .detail__img.detail__img--rocket
+                  img(src="images/detail/rocket.png" alt="ракета" width="135" height="150")
+            li.detail__item
+               .detail__info.detail__info--hand
+                  p.detail__text.detail__lead.
+                     Вы можете оформить быструю заявку на кредит по телефону:
+                  a.detail__phone(href="tel:+74950213931") +7 (495) 021-39-31
+                  a.detail__call(href="tel:+74950213931") Обратный звонок 
+               .detail__img.detail__img--hand
+                  img(src="images/detail/hand.png" alt="звонок" width="146" height="162")
+         .detail__more.container
+            p.
+               Ситуация с кредитованием ИП, а также малого и среднего бизнеса, сейчас далеко не самая благоприятная, Банки пытаются максимально снизить свои риски и отказывают потенциальным заемщикам, зачастую не разобравшись в ситуации. «Финансовые решения и сервис» предлагает Вам использовать накопленный опыт и знания нашей компании в данном направлении. Мы точно знаем на что будут обращать внимание кредиторы при рассмотрении вашей заявки. Работая с нами Вы значительно увеличиваете шансы на получение Положительного решения.
+
+   section.pledge
+      .pledge__inner.container
+         .pledge__box
+            h2.pledge__title Кредит под залог без переоформления собственности:
+            ul.pledge__list
+               li.pledge__item
+                  span.pledge__icon
+                     img(src="images/icons/pledge.svg" alt="иконка" width="24" height="24")
+                  .pledge__info
+                     h2.pledge__name Минимальная ставка по кредиту в текущей ситуации
+                     p.pledge__text.
+                        Деньги на любые цели, низкая процентная ставка, большая сумма кредита, минимальный пакет документов
+               li.pledge__item
+                  span.pledge__icon
+                     img(src="images/icons/pledge.svg" alt="иконка" width="24" height="24")
+                  .pledge__info
+                     h2.pledge__name Любое подтверждение дохода
+                     p.pledge__text.
+                        Программы без подтверждения дохода: при отсутствии постоянного заработка или места работы, либо когда неофициальная зарплата
+               li.pledge__item
+                  span.pledge__icon
+                     img(src="images/icons/pledge.svg" alt="иконка" width="24" height="24")
+                  .pledge__info
+                     h2.pledge__name Решение в день обращения
+                     p.pledge__text.
+                        Выдача денег в день подписания кредитного договора наличными или на счет в банке.
+               li.pledge__item
+                  span.pledge__icon
+                     img(src="images/icons/pledge.svg" alt="иконка" width="24" height="24")
+                  .pledge__info
+                     h2.pledge__name Возможность перезалога на лучшие условия
+                     p.pledge__text.
+                        Рефинансирование кредита на лучших условиях, с получением дополнительных средств.
+               li.pledge__item
+                  span.pledge__icon
+                     img(src="images/icons/pledge.svg" alt="иконка" width="24" height="24")
+                  .pledge__info
+                     h2.pledge__name Любая кредитная история
+                     p.pledge__text.
+                        Кредит с плохой кредитной историей и открытыми просрочками.
+               li.pledge__item
+                  span.pledge__icon
+                     img(src="images/icons/pledge.svg" alt="иконка" width="24" height="24")
+                  .pledge__info
+                     h2.pledge__name Залог сложных объектов недвижимости
+                     p.pledge__text.
+                        Таунхаусы, апартаменты, коммерческая недвижимость и земля.
+
+   section.application
+      .application__inner
+         .application__box
+            .application__info
+               .application__info-inner
+                  h2.application__title Предварительное одобрение #[br] за 15 минут — Онлайн
+                  p.application__text.
+                     Вы получите решение без приезда в офис. Мы вышлем вам расчет кредита, где будут указаны ставка по кредиту, срок кредита и ежемесячный платеж.
+                  a.application__btn(href="#") Отправить заявку
+            .application__girl
+               img(src="images/application/girl.png" alt="девушка" width="241" height="225")
+
+   section.form
+      .form__inner.container
+         .form__box
+            a.form__link.link.link--send(href="#") Отправить заявку
+            .form__content
+               h2.form__title Заявка на получение кредита для бизнеса
+               form.form__manage(action="#")
+                  ul.form__list
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Выберите тип кредита:
+                           input.form__field(type="text")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Ваше имя
+                           input.form__field(type="text")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Ваш регион проживания:
+                           input.form__field(type="text")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title E-mail (не обязательно)
+                           input.form__field(type="email")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Контактный телефон:
+                           input.form__field(type="tel" value="+7")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Сумма кредита (руб.)
+                           input.form__field(type="text")
+                  button.form__btn.link Отправить заявку
+                  .form__footer
+                     p.form__about.
+                        Нажимая кнопку отправить вы даете согласие на обработку персональных данных в рамках #[a(href="#") этого соглашения]. Для более подробного расчета вашего кредита, просьба связаться с нами по телефону:
+                     a.form__tel(href="tel:+74950213931") +7 (495) 021-39-31 
+
+   section.condition
+      .condition__inner.container
+         h2.condition__title Условия получения кредита
+         ul.condition__list
+            li.condition__item
+               p.condition__name Размер кредита
+               p.condition__more.
+                  500 тыс.– 300 млн. руб. кредита
+            li.condition__item
+               p.condition__name Срок кредита, max
+               p.condition__more.
+                  3 мес. – 20 лет
+            li.condition__item
+               p.condition__name Ставка / переплата
+               p.condition__more.
+                  от 8,5%
+            li.condition__item
+               p.condition__name Требования к заёмщику
+               ul.condition__more.condition__more-list
+                  li возраст: 18-75 лет;
+                  li регистрация: любой регион РФ (возможна временная);
+                  li наличие официальной работы: не требуется;
+                  li подтверждение размера заработной платы: не обязательно;
+                  li требования к качеству кредитной истории: мы найдем решение для любой ситуации, даже самой сложной
+            li.condition__item
+               p.condition__name Рассмотрение заявки
+               p.condition__more.
+                  1 - 3 дня
+         a.link.link--send(href="#") Отправить заявку
+
+   section.business
+      .business__inner
+         .business__bg.background-image
+            picture
+               source(srcset="images/business/business-desk.webp" media="(min-width: 500px)" type="image/webp")
+               source(srcset="images/business/business-desk.jpg" media="(min-width: 500px)" type="image/jpeg")
+               source(srcset="images/business/business-mob.webp" type="image/webp")
+               img(src="images/business/business-mob.jpg" alt="картинка" width="360" height="234")
+         .business__info
+            h2.business__title Кредит для бизнеса
+            p.business__text.
+               Мы точно знаем на что будут обращать внимание кредиторы при рассмотрении вашей заявки. Работая с нами Вы значительно увеличиваете шансы на получение Положительного решения.
+            a.business__btn(href="#") Подробнее
+
+   .history-wrapper
+      section.history
+         .history__inner.container
+            ul.history__list
+               li.history__item
+                  h2.history__title Кредитная история
+                  p.history__text.
+                     В случае необходимости мы предоставляем нашим клиентам информацию по уровню их кредитного рейтинга, данный подход используется при «скоринговых» моделях определения платежеспособности и очень распространён в потребительском кредитовании.
+                  a.history__link(href="#") Подробнее
+               li.history__item
+                  h2.history__title Кредитная история
+                  p.history__text.
+                     В случае необходимости мы предоставляем нашим клиентам информацию по уровню их кредитного рейтинга, данный подход используется при «скоринговых» моделях определения платежеспособности и очень распространён в потребительском кредитовании.
+                  a.history__link(href="#") Подробнее
+
+      section.mortgage
+         .mortgage__inner.container
+            .mortgage__info
+               .mortgage__about
+                  h2.mortgage__title Ипотека
+                  p.mortgage__text.
+                     Благодаря нашим партнерским отношениям с банками и льготным условиям кредитования для наших клиентов, мы можем предложить Вам самые низкие ставки на рынке, а так же рассмотреть сразу несколько вариантов на выбор.
+                  a.link(href="#") Оформить ипотеку
+               img.mortgage__img(src="images/mortgage/mortgage.png" alt="доллар" width="218")

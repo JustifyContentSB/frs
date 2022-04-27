@@ -2,6 +2,14 @@
    background: #fff
    position: relative
    z-index: 100
+   &--without
+      .header
+         &__inner
+            &::after
+               display: none
+            &--active
+               &::after
+                  display: block
    &__lead
       display: none
    &__left
@@ -21,7 +29,7 @@
          &:last-child
             margin-bottom: 0
    &__logo
-      min-width: 178px
+      min-width: 150px
       font-weight: 700
       font-size: 8px
       line-height: 8px
@@ -59,7 +67,6 @@
    &__user
       display: flex
       align-items: center
-      flex-wrap: wrap
       margin-left: auto
    &__btn
       margin-right: 8px
@@ -123,6 +130,15 @@
       background: #fff
       position: relative
       z-index: 5
+      &::after
+         content: ''
+         height: 15px
+         position: absolute
+         z-index: 15
+         top: 41px
+         left: 0
+         right: 0
+         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05)
       &--active
          &::after
             content: ''
@@ -143,6 +159,11 @@
 
 @media screen and (min-width: 1024px)
    .header
+      &--without
+         .header
+            &__inner
+               &::before
+                  display: none
       &__lead
          display: block
          background: var(--bgColor)
@@ -154,6 +175,16 @@
             padding: 10px var(--padding)
       &__inner
          padding: 24px var(--padding)
+         &::before
+            content: ''
+            position: absolute
+            left: var(--padding)
+            right: var(--padding)
+            bottom: 0
+            height: 1px
+            background: #E8E8E8
+         &::after
+            display: none
       &__btn
          padding: 12px 20px
          margin-right: 12px
