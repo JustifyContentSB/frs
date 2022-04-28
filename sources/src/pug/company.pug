@@ -1,0 +1,108 @@
+extends base/_layout
+block head
+   title О компании
+block page
+   section.breadcrumbs
+      .breadcrumbs__inner
+         h2.visually-hidden Навигационная цепочка сайта
+         ul.breadcrumbs__list
+            li.breadcrumbs__item
+               a(href="#") Главная
+            li.breadcrumbs__item.breadcrumbs__item--active
+               a(href="#") О компании
+
+   section.company
+      .company__inner.container
+         h1.title.company__title О компании
+         .lead.company__lead
+            p.
+               Компания ООО «Финансовые решения и сервис» уже более 10 лет оказывает профессиональные консалтинговые услуги в сфере ипотечного и залогового кредитования. За этот период нам удалось выстроить партнерские отношения со всеми основными участниками рынка: банками, инвесторами, риелторами, страховыми и оценочными компаниями. Обращаясь к нам Вы можете быть уверены, что получите самые выгодные условия.
+            p.
+               Мы входим в тройку самых крупных кредитных/ипотечных брокеров Москвы. #[br]
+               Если ты хочешь работать в крутой команде, тебе нравится общаться с людьми, для тебя важен результат и ты хочешь достойно зарабатывать приходи к нам!
+
+   section.credit.credit--company
+      h2.visually-hidden Виды кредитов
+      .credit__inner.container
+         ul.credit__list
+            li.credit__item
+               h3.credit__title Кредит под залог имущества
+               p.credit__limit от 500 тыс. до 100 млн. рублей
+               p.credit__rate Ставка от 9,2 %
+            li.credit__item
+               h3.credit__title Кредит под залог имущества
+               p.credit__limit от 500 тыс. до 100 млн. рублей
+               p.credit__rate Ставка от 9,2 %
+            li.credit__item
+               h3.credit__title Кредит под залог имущества
+               p.credit__limit от 500 тыс. до 100 млн. рублей
+               p.credit__rate Ставка от 9,2 %
+            li.credit__item
+               h3.credit__title Кредит под залог имущества
+               p.credit__limit от 500 тыс. до 100 млн. рублей
+               p.credit__rate Ставка от 9,2 %
+
+   section.business.business--about
+      .business__inner
+         .business__bg.background-image
+            picture
+               source(srcset="images/business/about-desk.webp" media="(min-width: 1024px)" type="image/webp")
+               source(srcset="images/business/about-desk.jpg" media="(min-width: 1024px)" type="image/jpeg")
+               source(srcset="images/business/about-tab.webp" media="(min-width: 500px)" type="image/webp")
+               source(srcset="images/business/about-tab.jpg" media="(min-width: 500px)" type="image/jpeg")
+               source(srcset="images/business/about-mob.webp" type="image/webp")
+               img(src="images/business/about-mob.jpg" alt="картинка" width="360" height="234")
+         .business__info
+            h2.business__title.visually-hidden О нашей компании
+            .business__about
+               p.
+                  Оперативность в решении Вашего вопроса. Мы всегда выполняем свою работу в максимально короткие сроки и требуем этого же от наших Банков-партнеров.
+               p.
+                  Работа с ООО «Финансовые решения и сервис» гарантирует нашим клиентам лучшие условия кредитования на рынке.
+               p.
+                  Мы обеспечиваем конфиденциальность любой информации, полученной от клиента.
+               p.
+                  Высокий уровень профессионализма наших сотрудников, имеющих огромный опыт работы в финансовых и кредитных учреждениях.
+               p.
+                  Вы получите полное юридическое и финансовое сопровождение на весь период исполнения обязательств по кредитному договору.
+
+   section.detail.detail--company
+      .detail__inner
+         ul.detail__list
+            li.detail__item
+               .detail__info
+                  h2.detail__title Решение в день #[br] обращения
+                  p.detail__text.
+                     Выдача денег в день подписания кредитного договора наличными или на счет в банке.
+               .detail__img.detail__img--rocket
+                  img(src="images/detail/rocket.png" alt="ракета" width="135" height="150")
+            li.detail__item
+               .detail__info.detail__info--hand
+                  p.detail__text.detail__lead.
+                     Вы можете оформить быструю заявку на кредит по телефону:
+                  a.detail__phone(href="tel:+74950213931") +7 (495) 021-39-31
+                  a.detail__call(href="tel:+74950213931") Обратный звонок 
+               .detail__img.detail__img--hand
+                  img(src="images/detail/hand.png" alt="звонок" width="146" height="162")
+
+   section.form.form--small
+      .form__inner.container
+         .form__box
+            a.form__link.link.link--send(href="#") Написать нам
+            .form__content
+               h2.form__title Написать нам
+               form.form__manage(action="#")
+                  ul.form__list
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Ваше имя
+                           input.form__field(type="text")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Сообщение
+                           textarea.form__textarea(name="textarea", cols="30", rows="10") 
+                  button.form__btn.link Отправить заявку
+                  .form__footer
+                     p.form__about.
+                        Так же Вы можете связаться с нами по телефону:
+                     a.form__tel(href="tel:+74950213931") +7 (495) 021-39-31

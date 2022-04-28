@@ -29,7 +29,7 @@
             font-size: 12px
             line-height: 100%
             color: #878787
-      &__field
+      &__field, &__textarea
          width: 100%
          padding: 14px 22px
          background: var(--bgColor)
@@ -39,6 +39,9 @@
          font-size: 13px
          line-height: 100%
          color: #000
+         resize: none
+      &__textarea
+         height: 138px
       &__btn
          margin-bottom: 20px
       &__footer
@@ -55,6 +58,10 @@
          font-weight: 700
          font-size: 16px
          line-height: 100%
+      &--small
+         .form
+            &__title
+               text-transform: uppercase
 
 @media screen and (min-width: 1024px)
    .form
@@ -90,6 +97,13 @@
       &__tel
          font-size: 20px
          line-height: 120%
+      &--small
+         .form
+            &__content
+               max-width: 510px
+               padding: 40px 60px
+            &__list
+               grid-template-columns: 1fr
       
 @media screen and (min-width: 1366px)
    .form

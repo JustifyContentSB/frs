@@ -75,6 +75,8 @@
 @media screen and (min-width: 1024px)
    .detail
       margin-bottom: 40px
+      &--company
+         margin-bottom: 20px
       &__inner
          max-width: var(--maxWidth)
          margin: 0 auto
@@ -110,6 +112,8 @@
 
 @media screen and (min-width: 1366px)
    .detail
+      &--company
+         margin-bottom: 20px
       &__item
          min-height: 228px
          padding: 30px 135px 30px 43px
@@ -137,6 +141,11 @@
 @media screen and (min-width: 1600px)
    .detail
       margin-bottom: 80px
+      &--company
+         margin-bottom: 20px
+         .detail
+            &__list
+               margin-bottom: 0
       &__item
          min-height: 264px
          padding: 47px 135px 30px 50px

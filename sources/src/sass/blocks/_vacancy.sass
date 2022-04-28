@@ -1,0 +1,164 @@
+.vacancy
+   margin-bottom: 24px
+   &__title
+      margin-bottom: 14px
+   &__top
+      padding: 15px
+      display: flex
+      align-items: center
+      justify-content: space-between
+   &__about
+      max-width: 226px
+   &__pro
+      margin-bottom: 5px
+      font-weight: 700
+      font-size: 12px
+      line-height: 150%
+   &__btn
+      font-size: 11px
+      line-height: 127%
+      color: var(--accent)
+      text-decoration: underline
+   &__toggle
+      width: 36px
+      min-width: 36px
+      height: 36px
+      display: flex
+      justify-content: center
+      align-items: center
+      background: var(--bgColor)
+      border-radius: 3px
+      position: relative
+      transition: background .3s ease
+      &::before, &::after
+         content: ''
+         position: absolute
+         left: 50%
+         top: 50%
+         transform: translate(-50%, -50%)
+         width: 24px
+         height: 24px
+         transition: opacity .2s ease, transform .2s ease
+      &::before
+         background: url('../images/icons/btn-arrow-2.svg') no-repeat center / contain
+         opacity: 1
+      &::after
+         background: url('../images/icons/btn-arrow.svg') no-repeat center / contain
+         opacity: 0
+         transform: rotate(-90deg) translate(50%, -46%)
+   &__info
+      padding: 15px
+      font-weight: 300
+      font-size: 10px
+      line-height: 140%
+      color: var(--textColor)
+      border-top: 1px solid var(--bgColor)
+      max-height: 0
+      opacity: 0
+      overflow: hidden
+      padding: 0 20px
+      will-change: max-height
+      transition: all 0.2s ease-out
+      &-box
+         margin-bottom: 10px
+         &:last-child
+            margin-bottom: 0
+      &-title
+         margin-bottom: 12px
+         font-weight: 500
+         font-size: 12px
+         line-height: 167%
+         color: #000
+      &-list
+         li
+            margin-bottom: 5px
+            padding-left: 8px
+            position: relative
+            &::before
+               content: ""
+               position: absolute
+               left: 0
+               top: 6px
+               width: 3px
+               height: 3px
+               border-radius: 50%
+               background: #000
+            &:last-child
+               margin-bottom: 0
+   &__item
+      margin-bottom: 10px
+      border: 3px solid var(--bgColor)
+      border-radius: 3px
+      &:last-child
+         margin-bottom: 0
+      &--open
+         .vacancy
+            &__info
+               max-height: none
+               padding: 20px
+               opacity: 1
+               box-sizing: content-box
+            &__toggle
+               background: var(--accent)
+               &::before
+                  opacity: 0
+                  transform: rotate(90deg) translate(-50%, 50%)
+               &::after
+                  opacity: 1
+                  transform: rotate(0deg) translate(-52%, -45%)
+            &__btn
+               &::before
+                  content: 'Свернуть'
+               span
+                  display: none
+
+@media screen and (min-width: 1024px)
+   .vacancy
+      &__title
+         margin-bottom: 24px
+
+@media screen and (min-width: 1366px)
+   .vacancy
+      margin-bottom: var(--margin)
+      &__item
+         margin-bottom: 18px
+         border: 5px solid var(--bgColor)
+         &--open
+            .vacancy
+               &__info
+                  padding: 35px
+                  padding-bottom: 25px
+      &__top
+         padding: 25px 35px 20px
+      &__about
+         max-width: calc(100% - 80px)
+      &__pro
+         margin-bottom: 0
+         font-size: 16px
+         line-height: 138%
+      &__btn
+         font-size: 12px
+      &__info
+         padding: 0 35px
+         font-size: 13px
+         line-height: 170%
+         &-box
+            margin-bottom: 28px
+         &-title
+            margin-bottom: 14px
+            font-size: 14px
+            line-height: 140%
+         &-list
+            li
+               margin-bottom: 0
+               padding-left: 10px
+               &::before
+                  top: 10px
+
+@media screen and (min-width: 1600px)
+   .vacancy
+      margin-bottom: 28px
+      &__title
+         margin-bottom: 40px
+      &__item
+         margin-bottom: 30px

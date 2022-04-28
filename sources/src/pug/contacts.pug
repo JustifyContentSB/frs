@@ -1,0 +1,127 @@
+extends base/_layout
+block head
+   title Контакты
+block page
+   section.breadcrumbs
+      .breadcrumbs__inner
+         h2.visually-hidden Навигационная цепочка сайта
+         ul.breadcrumbs__list
+            li.breadcrumbs__item
+               a(href="#") Главная
+            li.breadcrumbs__item.breadcrumbs__item--active
+               a(href="#") Контакты
+
+   section.contacts
+      .contacts__inner.container
+         h1.contacts__title.title Контакты
+         .contacts__main
+            ul.contacts__box
+               li.contacts__block.block
+                  h2.contacts__location Москва и Московская область
+                  ul.contacts__list
+                     li.contacts__item
+                        span.contacts__icon
+                           img(src="images/icons/contacts-arrow.svg" alt="иконка" width="32" height="32")
+                        .contacts__info
+                           h3.contacts__name Адрес
+                           p.contacts__about.
+                              127055, Москва, Ленинградский проспект, 36с30, подъезд 1, офис № 2
+                     li.contacts__item
+                        span.contacts__icon
+                           img(src="images/icons/contacts-tel.svg" alt="иконка" width="32" height="32")
+                        .contacts__info
+                           a.contacts__name(href="tel:+74950213931") +7 (495) 021-39-31
+                           p.contacts__about.
+                              Единая справочная служба #[br]
+                              Ежедневно с 10:00 до 21:00
+                     li.contacts__item
+                        span.contacts__icon
+                           img(src="images/icons/contacts-email.svg" alt="иконка" width="32" height="32")
+                        .contacts__info
+                           h3.contacts__name Пишите нам
+                           p.contacts__about.
+                              Общие вопросы: #[a(href="mailto:info@frs-credit.ru") info@frs-credit.ru] #[br]
+                              Для заявок: #[a(href="mailto:order@frs-credit.ru") order@frs-credit.ru]
+                  .contacts__map
+                     .background-image
+                        picture
+                           source(srcset="images/map/map-desk.webp" media="(min-width: 1280px)" type="image/webp")
+                           source(srcset="images/map/map-desk.jpg" media="(min-width: 1280px)" type="image/jpeg")
+                           source(srcset="images/map/map-tab.webp" media="(min-width: 768px)" type="image/webp")
+                           source(srcset="images/map/map-tab.jpg" media="(min-width: 768px)" type="image/jpeg")
+                           source(srcset="images/map/map-mob.webp" type="image/webp")
+                           img(src="images/map/map-mob.jpg" alt="картинка" width="292" height="240")
+
+               li.contacts__block.block
+                  h2.contacts__location Челябинск и Челябинская область
+                  ul.contacts__list
+                     li.contacts__item
+                        span.contacts__icon
+                           img(src="images/icons/contacts-arrow.svg" alt="иконка" width="32" height="32")
+                        .contacts__info
+                           h3.contacts__name Адрес
+                           p.contacts__about.
+                              Челябинск, пр-т Ленина д. 35 оф. 322
+                     li.contacts__item
+                        span.contacts__icon
+                           img(src="images/icons/contacts-tel.svg" alt="иконка" width="32" height="32")
+                        .contacts__info
+                           a.contacts__name(href="tel:+74950213931") +7 (495) 021-39-31
+                           p.contacts__about.
+                              Единая справочная служба #[br]
+                              Ежедневно с 10:00 до 21:00
+                     li.contacts__item
+                        span.contacts__icon
+                           img(src="images/icons/contacts-email.svg" alt="иконка" width="32" height="32")
+                        .contacts__info
+                           h3.contacts__name Пишите нам
+                           p.contacts__about.
+                              Общие вопросы: #[a(href="mailto:info@frs-credit.ru") info@frs-credit.ru] #[br]
+                              Для заявок: #[a(href="mailto:order@frs-credit.ru") order@frs-credit.ru]
+                  .contacts__map
+                     .background-image
+                        picture
+                           source(srcset="images/map/map-desk.webp" media="(min-width: 1280px)" type="image/webp")
+                           source(srcset="images/map/map-desk.jpg" media="(min-width: 1280px)" type="image/jpeg")
+                           source(srcset="images/map/map-tab.webp" media="(min-width: 768px)" type="image/webp")
+                           source(srcset="images/map/map-tab.jpg" media="(min-width: 768px)" type="image/jpeg")
+                           source(srcset="images/map/map-mob.webp" type="image/webp")
+                           img(src="images/map/map-mob.jpg" alt="картинка" width="292" height="240")
+
+   section.form
+      .form__inner.container
+         .form__box
+            a.form__link.link.link--send(href="#") Отправить заявку
+            .form__content
+               h2.form__title Заявка на получение кредита для бизнеса
+               form.form__manage(action="#")
+                  ul.form__list
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Выберите тип кредита:
+                           input.form__field(type="text")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Ваше имя
+                           input.form__field(type="text")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Ваш регион проживания:
+                           input.form__field(type="text")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title E-mail (не обязательно)
+                           input.form__field(type="email")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Контактный телефон:
+                           input.form__field(type="tel" value="+7")
+                     li.form__item
+                        label.form__label
+                           span.form__label-title Сумма кредита (руб.)
+                           input.form__field(type="text")
+                  button.form__btn.link Отправить заявку
+                  .form__footer
+                     p.form__about.
+                        Нажимая кнопку отправить вы даете согласие на обработку персональных данных в рамках #[a(href="#") этого соглашения]. Для более подробного расчета вашего кредита, просьба связаться с нами по телефону:
+                     a.form__tel(href="tel:+74950213931") +7 (495) 021-39-31

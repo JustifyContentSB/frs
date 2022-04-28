@@ -38,3 +38,43 @@ function featuresSlider() {
         });
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.vacancy__item');
+
+    accordions.forEach(el => {
+        el.addEventListener('click', (e) => {
+            const self = e.currentTarget;
+            const control = self.querySelector('.vacancy__top');
+            const content = self.querySelector('.vacancy__info');
+
+            if (self.classList.contains('vacancy__item--open')) {
+                accordions.forEach(elem => {
+                    elem.classList.remove('vacancy__item--open');
+                    elem.querySelector('.vacancy__info').style.maxHeight = null;
+                });
+            } else {
+                accordions.forEach(elem => {
+                    elem.classList.remove('vacancy__item--open');
+                    elem.querySelector('.vacancy__info').style.maxHeight = null;
+                });
+                self.classList.add('vacancy__item--open');
+            }
+
+
+            if (self.classList.contains('vacancy__item--open')) {
+                control.setAttribute('aria-expanded', true);
+                content.setAttribute('aria-hidden', false);
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                control.setAttribute('aria-expanded', false);
+                content.setAttribute('aria-hidden', true);
+                content.style.maxHeight = null;
+            }
+        });
+
+        $('.vacancy__btn').on('click', function(e) {
+            e.preventDefault();
+        });
+    });
+});

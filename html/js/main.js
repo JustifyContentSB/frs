@@ -35,4 +35,72 @@ function featuresSlider() {
       spaceBetween: 12
     });
   }
-}
+} // document.addEventListener('DOMContentLoaded', () => {
+//     const accordions = document.querySelectorAll('.accordion');
+//     accordions.forEach(el => {
+//         el.addEventListener('click', (e) => {
+//             const self = e.currentTarget;
+//             const control = self.querySelector('.accordion__control');
+//             const content = self.querySelector('.accordion__content');
+//             if (self.classList.contains('open')) {
+//                 accordions.forEach(elem => {
+//                     elem.classList.remove('open');
+//                     elem.querySelector('.accordion__content').style.maxHeight = null;
+//                 });
+//             } else {
+//                 accordions.forEach(elem => {
+//                     elem.classList.remove('open');
+//                     elem.querySelector('.accordion__content').style.maxHeight = null;
+//                 });
+//                 self.classList.add('open');
+//             }
+//             if (self.classList.contains('open')) {
+//                 control.setAttribute('aria-expanded', true);
+//                 content.setAttribute('aria-hidden', false);
+//                 content.style.maxHeight = content.scrollHeight + 'px';
+//             } else {
+//                 control.setAttribute('aria-expanded', false);
+//                 content.setAttribute('aria-hidden', true);
+//                 content.style.maxHeight = null;
+//             }
+//         });
+//     });
+// });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var accordions = document.querySelectorAll('.vacancy__item');
+  accordions.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var self = e.currentTarget;
+      var control = self.querySelector('.vacancy__top');
+      var content = self.querySelector('.vacancy__info');
+
+      if (self.classList.contains('vacancy__item--open')) {
+        accordions.forEach(function (elem) {
+          elem.classList.remove('vacancy__item--open');
+          elem.querySelector('.vacancy__info').style.maxHeight = null;
+        });
+      } else {
+        accordions.forEach(function (elem) {
+          elem.classList.remove('vacancy__item--open');
+          elem.querySelector('.vacancy__info').style.maxHeight = null;
+        });
+        self.classList.add('vacancy__item--open');
+      }
+
+      if (self.classList.contains('vacancy__item--open')) {
+        control.setAttribute('aria-expanded', true);
+        content.setAttribute('aria-hidden', false);
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        control.setAttribute('aria-expanded', false);
+        content.setAttribute('aria-hidden', true);
+        content.style.maxHeight = null;
+      }
+    });
+    $('.vacancy__btn').on('click', function (e) {
+      e.preventDefault();
+    });
+  });
+});

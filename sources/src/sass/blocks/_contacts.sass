@@ -1,0 +1,89 @@
+.contacts
+   margin-bottom: var(--margin)
+   &__title
+      margin-bottom: 14px
+   &__block
+      margin-bottom: 14px
+      &:last-child
+         margin-bottom: 0
+   &__location
+      margin-bottom: 20px
+      font-weight: 700
+      font-size: 14px
+      line-height: 214%
+   &__item
+      margin-bottom: 20px
+      padding: 14px 10px
+      border: 1px solid #EDEDED
+      border-radius: 3px
+      display: flex
+      align-items: flex-start
+   &__icon
+      width: 32px
+      min-width: 32px
+      height: 32px
+      margin-right: 12px
+   &__name
+      margin-bottom: 12px
+      font-weight: 600
+      font-size: 14px
+      line-height: 120%
+   &__about
+      font-weight: 400
+      font-size: 11px
+      line-height: 145%
+      color: var(--textColor)
+      a
+         color: var(--accent)
+   &__map
+      width: 100%
+      height: 240px
+      position: relative
+
+@media screen and (min-width: 768px)
+   .contacts
+      &__list
+         margin: 0
+         display: grid
+         grid-template-columns: repeat(3, 1fr)
+         grid-gap: 20px
+
+@media screen and (min-width: 1024px)
+   .contacts
+      &__block
+         margin-bottom: 24px
+      &__title
+         margin-bottom: 24px
+      &__location
+         margin-bottom: 30px
+         font-size: 22px
+         line-height: 182%
+      &__list
+         margin-bottom: 30px
+      &__item
+         margin: 0
+         padding: 24px 20px
+      &__icon
+         margin-right: 15px
+      &__name
+         font-size: 16px
+         line-height: 130%
+      &__about
+         font-size: 12px
+         line-height: 167%
+      &__map
+         min-height: 360px
+
+@media screen and (min-width: 1366px)
+   .contacts
+      margin-bottom: 40px
+      &__location
+         margin-bottom: 40px
+      &__list
+         margin-bottom: 38px
+
+@media screen and (min-width: 1600px)
+   .contacts
+      margin-bottom: 80px
+      &__title
+         margin-bottom: 40px
