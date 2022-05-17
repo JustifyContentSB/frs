@@ -5,6 +5,10 @@ $(document).ready(function () {
   financeSlider();
   menuToggle();
   featuresSlider();
+  maskFunc();
+  popupShow();
+  popupClose();
+  overlayClose();
 }); // Your functions here
 
 function financeSlider() {
@@ -16,16 +20,49 @@ function financeSlider() {
   });
 }
 
+var headerBurger = document.querySelector('.header__burger');
+var header = document.querySelector('.header__inner');
+var body = document.querySelector('body');
+
 function menuToggle() {
   if ($(window).width() < 1024) {
-    var headerBurger = document.querySelector('.header__burger');
-    var header = document.querySelector('.header__inner');
-    var body = document.querySelector('body');
     $(headerBurger).on('click', function (e) {
       $(header).toggleClass('header__inner--active');
       $(body).toggleClass('no-scroll');
     });
+    $('.header__menu-toggle--submenu').on('click', function (e) {
+      e.preventDefault();
+      $(this).parent('.header__menu-item').toggleClass('header__menu-item--active');
+    });
   }
+}
+
+function popupShow() {
+  $('.js-popup-toggle').on('click', function (e) {
+    e.preventDefault();
+    console.log('sass');
+    $('.popup').addClass('popup--active');
+    $('.popup-overlay').addClass('popup-overlay--active');
+    $('body').addClass('no-scroll');
+    $(header).removeClass('header__inner--active');
+  });
+}
+
+function popupClose() {
+  $('.popup__close').on('click', function (e) {
+    e.preventDefault();
+    $(this).parent('.popup__header').parent('.popup').removeClass('popup--active');
+    $('.popup-overlay').removeClass('popup-overlay--active');
+    $('body').removeClass('no-scroll');
+  });
+}
+
+function overlayClose() {
+  $('.popup-overlay').on('click', function (e) {
+    $(this).removeClass('popup-overlay--active');
+    $('.popup').removeClass('popup--active');
+    $('body').removeClass('no-scroll');
+  });
 }
 
 function featuresSlider() {
@@ -35,38 +72,7 @@ function featuresSlider() {
       spaceBetween: 12
     });
   }
-} // document.addEventListener('DOMContentLoaded', () => {
-//     const accordions = document.querySelectorAll('.accordion');
-//     accordions.forEach(el => {
-//         el.addEventListener('click', (e) => {
-//             const self = e.currentTarget;
-//             const control = self.querySelector('.accordion__control');
-//             const content = self.querySelector('.accordion__content');
-//             if (self.classList.contains('open')) {
-//                 accordions.forEach(elem => {
-//                     elem.classList.remove('open');
-//                     elem.querySelector('.accordion__content').style.maxHeight = null;
-//                 });
-//             } else {
-//                 accordions.forEach(elem => {
-//                     elem.classList.remove('open');
-//                     elem.querySelector('.accordion__content').style.maxHeight = null;
-//                 });
-//                 self.classList.add('open');
-//             }
-//             if (self.classList.contains('open')) {
-//                 control.setAttribute('aria-expanded', true);
-//                 content.setAttribute('aria-hidden', false);
-//                 content.style.maxHeight = content.scrollHeight + 'px';
-//             } else {
-//                 control.setAttribute('aria-expanded', false);
-//                 content.setAttribute('aria-hidden', true);
-//                 content.style.maxHeight = null;
-//             }
-//         });
-//     });
-// });
-
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   var accordions = document.querySelectorAll('.vacancy__item');
@@ -104,3 +110,58 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  var accordions = document.querySelectorAll('.vacancy__item');
+  accordions.forEach(function (el) {
+    var self = accordions.currentTarget;
+    var control = self.querySelector('.vacancy__top');
+    var content = self.querySelector('.vacancy__info');
+    $('.js-vacancy-toggle').on('click', function (e) {
+      e.preventDefault();
+
+      if (self.classList.contains('vacancy__item--open')) {
+        accordions.forEach(function (elem) {
+          elem.classList.remove('vacancy__item--open');
+          elem.querySelector('.vacancy__info').style.maxHeight = null;
+        });
+      } else {
+        accordions.forEach(function (elem) {
+          elem.classList.remove('vacancy__item--open');
+          elem.querySelector('.vacancy__info').style.maxHeight = null;
+        });
+        self.classList.add('vacancy__item--open');
+      }
+
+      if (self.classList.contains('vacancy__item--open')) {
+        control.setAttribute('aria-expanded', true);
+        content.setAttribute('aria-hidden', false);
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        control.setAttribute('aria-expanded', false);
+        content.setAttribute('aria-hidden', true);
+        content.style.maxHeight = null;
+      }
+    });
+    $('.vacancy__btn').on('click', function (e) {
+      e.preventDefault();
+    });
+  });
+});
+$('.credit-list').select2({
+  placeholder: 'Выберите тип кредита:'
+});
+$('.location-list').select2({
+  placeholder: 'Ваш регион проживания:'
+});
+
+function maskFunc() {
+  var elements = document.querySelectorAll('.phone');
+  var maskOptions = {
+    mask: '+7(000)000-00-00',
+    lazy: false
+  };
+  var masks = [];
+  elements.forEach(function (element, index) {
+    masks[index] = new IMask(element, maskOptions);
+  });
+}

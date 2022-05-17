@@ -1,0 +1,49 @@
+.popup
+   .popup__header
+      h2.popup__title онлайн заявка
+      a.popup__close(href="#")
+         img(src="images/icons/close.svg", alt="закрыть" width="24" height="24")
+   form.form__manage(action="#")
+      ul.form__list
+         li.form__item
+            .form__label
+               span.form__label-title Выберите тип кредита:
+               select.form__field.credit-list
+                  option Кредит для бизнеса1
+                  option Кредит для бизнеса2
+                  option Кредит для бизнеса3
+                  option Кредит для бизнеса4
+                  option Кредит для бизнеса5
+         li.form__item
+            label.form__label
+               span.form__label-title Ваше имя
+               input.form__field(type="text")
+         li.form__item
+            .form__label
+               span.form__label-title Ваш регион проживания:
+               select.form__field.location-list
+                  option Москва
+                  option Санект-Петербург
+                  option Краснодар
+                  option Челябинск
+                  option Ростов-на-Дону
+         li.form__item
+            label.form__label
+               span.form__label-title E-mail (не обязательно)
+               input.form__field(type="email")
+         li.form__item
+            label.form__label
+               span.form__label-title Контактный телефон:
+               input.form__field.phone(type="tel")
+         li.form__item
+            label.form__label
+               span.form__label-title Сумма кредита (руб.)
+               input.form__field(type="text")
+      .form__bottom
+         .form__footer
+            p.form__about.
+               Нажимая кнопку отправить вы даете согласие на обработку персональных данных в рамках #[a(href="#") этого соглашения]. Для более подробного расчета вашего кредита, просьба связаться с нами по телефону:
+            a.form__tel(href="tel:+74950213931") +7 (495) 021-39-31
+         button.form__btn.link Оставить заявку
+
+.popup-overlay

@@ -4,15 +4,44 @@
 	background: url("../images/sprites/main.svg") no-repeat;
 }
 
-.svg-svg-city {
+.svg-svg-arrow-down {
 	@extend %svg-common;
 	background-position: 0 0;
 	background-size: math.div(68, 26)*100% auto;
 	width: 26px;
 
 }
-@mixin svg-pos-svg-city {
+@mixin svg-pos-svg-arrow-down {
 	background-position: 0 0;
+}
+@mixin svg-svg-arrow-down-hover {
+	.svg-svg-arrow-down {
+		@include svg-pos-svg-arrow-down-hover
+	}
+}
+
+.svg-svg-arrow-down:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(26, 26)*100%;
+}
+
+.svg-svg-arrow-down-dims {
+	width: 26px;
+	height: 26px;
+}
+
+.svg-svg-city {
+	@extend %svg-common;
+	background-position: 61.904761904761905% 0;
+	background-size: math.div(68, 26)*100% auto;
+	width: 26px;
+
+}
+@mixin svg-pos-svg-city {
+	background-position: 61.904761904761905% 0;
 }
 @mixin svg-svg-city-hover {
 	.svg-svg-city {
@@ -35,13 +64,13 @@
 
 .svg-svg-email {
 	@extend %svg-common;
-	background-position: 61.904761904761905% 0;
+	background-position: 0 100%;
 	background-size: math.div(68, 26)*100% auto;
 	width: 26px;
 
 }
 @mixin svg-pos-svg-email {
-	background-position: 61.904761904761905% 0;
+	background-position: 0 100%;
 }
 @mixin svg-svg-email-hover {
 	.svg-svg-email {
@@ -64,13 +93,13 @@
 
 .svg-svg-next {
 	@extend %svg-common;
-	background-position: 50% 72.22222222222223%;
+	background-position: 100% 0;
 	background-size: math.div(68, 16)*100% auto;
 	width: 16px;
 
 }
 @mixin svg-pos-svg-next {
-	background-position: 50% 72.22222222222223%;
+	background-position: 100% 0;
 }
 @mixin svg-svg-next-hover {
 	.svg-svg-next {
@@ -93,13 +122,13 @@
 
 .svg-svg-prev {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 100% 44.44444444444444%;
 	background-size: math.div(68, 16)*100% auto;
 	width: 16px;
 
 }
 @mixin svg-pos-svg-prev {
-	background-position: 100% 0;
+	background-position: 100% 44.44444444444444%;
 }
 @mixin svg-svg-prev-hover {
 	.svg-svg-prev {
@@ -122,13 +151,13 @@
 
 .svg-svg-tel {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 61.904761904761905% 100%;
 	background-size: math.div(68, 26)*100% auto;
 	width: 26px;
 
 }
 @mixin svg-pos-svg-tel {
-	background-position: 0 100%;
+	background-position: 61.904761904761905% 100%;
 }
 @mixin svg-svg-tel-hover {
 	.svg-svg-tel {

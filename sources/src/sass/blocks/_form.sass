@@ -2,74 +2,85 @@
    margin-bottom: 24px
    &__content
       display: none
-
-@media screen and (min-width: 768px)
-   .form
-      &__link
-         display: none
-      &__content
-         display: block
-      &__title
-         margin-bottom: 14px
-         font-weight: 700
-         font-size: 18px
-         line-height: 144%
-      &__list
-         margin-bottom: 20px
-         display: grid
-         grid-template-columns: 1fr 1fr
-         grid-gap: 20px
-      &__label
-         display: flex
-         flex-direction: column
-         align-items: flex-start
-         &-title
-            margin-bottom: 6px
-            font-weight: 400
-            font-size: 12px
-            line-height: 100%
-            color: #878787
-      &__field, &__textarea
-         width: 100%
-         padding: 14px 22px
-         background: var(--bgColor)
-         border-radius: 3px
-         border: none
+   &__field
+      transition: all .2s ease-in-out
+      border: 1px solid transparent
+      &:hover
+         background: #EEF2F5
+      &:focus
+         border: 1px solid #000
+         background: #EEF2F5
+   &__title
+      margin-bottom: 14px
+      font-weight: 700
+      font-size: 18px
+      line-height: 144%
+   &__list
+      margin-bottom: 20px
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 20px
+   &__label
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      &-title
+         margin-bottom: 6px
          font-weight: 400
-         font-size: 13px
+         font-size: 12px
          line-height: 100%
-         color: #000
-         resize: none
-      &__textarea
-         height: 138px
-      &__btn
-         margin-bottom: 20px
-      &__footer
-         width: 100%
-         max-width: 390px
-      &__about
-         margin-bottom: 16px
-         font-size: 11px
-         line-height: 127%
-         color: #878787
-         a
-            font-weight: 700
-      &__tel
+         color: var(--secondary)
+   &__field, &__textarea
+      width: 100%
+      height: 50px
+      padding: 14px 22px
+      background: var(--bgColor)
+      border-radius: 3px
+      font-weight: 400
+      font-size: 15px
+      line-height: 100%
+      color: #000
+      resize: none
+   &__textarea
+      height: 138px
+      transition: all .2s ease-in-out
+      border: 1px solid transparent
+      &:hover
+         background: #EEF2F5
+      &:focus
+         border: 1px solid #000
+         background: #EEF2F5
+   &__btn
+      margin-bottom: 20px
+   &__footer
+      width: 100%
+      max-width: 390px
+   &__about
+      margin-bottom: 16px
+      font-size: 11px
+      line-height: 127%
+      color: var(--secondary)
+      a
          font-weight: 700
-         font-size: 16px
-         line-height: 100%
-      &--small
-         .form
-            &__title
-               text-transform: uppercase
+   &__tel
+      font-weight: 700
+      font-size: 16px
+      line-height: 100%
+   &--small
+      .form
+         &__title
+            text-transform: uppercase
 
 @media screen and (min-width: 1024px)
    .form
       margin-bottom: 40px
+      &__link
+         display: none
       &__box
          padding: 35px 32px
          background: var(--bgColor)
       &__content
+         display: block
          max-width: 928px
          margin: 0 auto
          padding: 40px
@@ -86,7 +97,7 @@
          margin-bottom: 30px
          grid-gap: 30px
       &__field
-         padding: 18px 22px
+         padding: 15px 22px 14px
          font-size: 15px
       &__about
          margin-bottom: 12px

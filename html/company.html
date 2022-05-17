@@ -24,62 +24,67 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="header__lead">
-          <p class="header__lead-text container">ООО «Финансовые решения и сервис» уже более 10 лет оказывает профессиональные консалтинговые услуги в сфере ипотечного и залогового кредитования.</p>
-        </div>
-        <div class="header__inner container">
-          <div class="header__left">
-            <button class="header__burger btn"><span></span><span></span><span></span></button><a class="header__logo" href="#"><img src="images/icons/logo.svg" alt="логотип" width="90" height="24">
-              <p>Финансовые <br>  решения и бизнес</p></a>
+      <div class="header-wrapper">
+        <header class="header">
+          <div class="header__lead">
+            <p class="header__lead-text container">ООО «Финансовые решения и сервис» уже более 10 лет оказывает профессиональные консалтинговые услуги в сфере ипотечного и залогового кредитования.</p>
           </div>
-          <div class="header__right">
-            <div class="header__info">
-              <div class="header__contacts">
-                <div class="header__contacts-left"><a class="header__contacts-tel" href="tel:+74950213931"><span class="header__contacts-tel__icon">
-                      <svg>
-                        <use href="images/sprites/main.stack.svg#svg-tel"></use>
-                      </svg></span><span>+7 (495) 021-39-31</span></a>
-                  <p class="header__contacts-time">Ежедневно с 10:00 до 21:00</p>
+          <div class="header__inner container">
+            <div class="header__left">
+              <button class="header__burger btn"><span class="header__burger-inner"><span class="header__burger-line header__burger-line--1"></span><span class="header__burger-line header__burger-line--2"></span><span class="header__burger-line header__burger-line--3"></span></span></button><a class="header__logo" href="#"><img src="images/icons/logo.svg" alt="логотип" width="90" height="24">
+                <p>Финансовые <br>  решения и бизнес</p></a>
+            </div>
+            <div class="header__right">
+              <div class="header__info">
+                <div class="header__contacts">
+                  <div class="header__contacts-left"><a class="header__contacts-tel" href="tel:+74950213931"><span class="header__contacts-tel__icon">
+                        <svg>
+                          <use href="images/sprites/main.stack.svg#svg-tel"></use>
+                        </svg></span><span>+7 (495) 021-39-31</span></a>
+                    <p class="header__contacts-time">Ежедневно с 10:00 до 21:00</p>
+                  </div>
+                  <div class="header__contacts-right"><a class="header__contacts-location" href="#"><span class="header__contacts-location__icon">
+                        <svg>
+                          <use href="images/sprites/main.stack.svg#svg-city"></use>
+                        </svg></span><span>Москва, Ленинградский проспект, 36с30</span></a></div>
                 </div>
-                <div class="header__contacts-right"><a class="header__contacts-location" href="#"><span class="header__contacts-location__icon">
-                      <svg>
-                        <use href="images/sprites/main.stack.svg#svg-city"></use>
-                      </svg></span><span>Москва, Ленинградский проспект, 36с30</span></a></div>
+                <div class="header__user"><a class="header__btn header__btn--tel btn" href="tel:+74950213931"><span class="header__btn-text">Обратный звонок</span>
+                    <svg>
+                      <use href="images/sprites/main.stack.svg#svg-tel"></use>
+                    </svg></a><a class="header__btn btn js-popup-toggle" href="mailto:mail@mail.ru"><span class="header__btn-text">Оставить заявку</span>
+                    <svg>
+                      <use href="images/sprites/main.stack.svg#svg-email"></use>
+                    </svg></a></div>
               </div>
-              <div class="header__user"><a class="header__btn header__btn--tel btn" href="tel:+74950213931"><span class="header__btn-text">Обратный звонок</span>
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-tel"></use>
-                  </svg></a><a class="header__btn btn" href="mailto:mail@mail.ru"><span class="header__btn-text">Оставить заявку</span>
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-email"></use>
-                  </svg></a></div>
-            </div>
-            <div class="header__bottom">
-              <ul class="header__menu">
-                <li class="header__menu-item"><a class="header__menu-toggle" href="#">Главная</a></li>
-                <li class="header__menu-item"><a class="header__menu-toggle" href="#">Наши услуги</a>
-                  <ul class="header__menu-submenu">
-                    <li><a href="#">Кредит под залог</a></li>
-                    <li><a href="#">Кредит для бизнеса</a></li>
-                    <li><a href="#">Ипотека</a></li>
-                    <li><a href="#">Кредит на любые цели</a></li>
-                    <li><a href="#">Потребительские кредиты</a></li>
-                    <li><a href="#">Рефинансирование / Перекредитование</a></li>
-                  </ul>
-                </li>
-                <li class="header__menu-item"><a class="header__menu-toggle" href="#">Вакансии</a></li>
-                <li class="header__menu-item"><a class="header__menu-toggle" href="#">Контакты</a></li>
-                <li class="header__menu-item"><a class="header__menu-toggle" href="#">Специальные предложения</a></li>
-              </ul>
-              <ul class="header__bottom-contacts">
-                <li><a class="link header__bottom-contacts--tel" href="tel:+74950213931">Обратный звонок</a></li>
-                <li><a class="link" href="#">Оставить заявку</a></li>
-              </ul>
+              <div class="header__bottom">
+                <ul class="header__menu">
+                  <li class="header__menu-item"><a class="header__menu-toggle" href="#">Главная</a></li>
+                  <li class="header__menu-item"><a class="header__menu-toggle header__menu-toggle header__menu-toggle--submenu" href="#"><span>Наши услуги</span>
+                      <svg>
+                        <use href="images/sprites/main.stack.svg#svg-arrow-down"></use>
+                      </svg></a>
+                    <ul class="header__menu-submenu">
+                      <li><a href="#">Кредит под залог</a></li>
+                      <li><a href="#">Кредит для бизнеса</a></li>
+                      <li><a href="#">Ипотека</a></li>
+                      <li><a href="#">Кредит на любые цели</a></li>
+                      <li><a href="#">Потребительские кредиты</a></li>
+                      <li><a href="#">Рефинансирование / Перекредитование</a></li>
+                    </ul>
+                  </li>
+                  <li class="header__menu-item"><a class="header__menu-toggle" href="#">Вакансии</a></li>
+                  <li class="header__menu-item"><a class="header__menu-toggle" href="#">Контакты</a></li>
+                  <li class="header__menu-item"><a class="header__menu-toggle header__menu-toggle--bold" href="#">Специальные предложения</a></li>
+                </ul>
+                <ul class="header__bottom-contacts">
+                  <li><a class="link header__bottom-contacts--tel" href="tel:+74950213931">Обратный звонок</a></li>
+                  <li><a class="link js-popup-toggle" href="#">Оставить заявку</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+      </div>
       <main class="main">
         <section class="breadcrumbs">
           <div class="breadcrumbs__inner">
@@ -176,7 +181,7 @@
         </section>
         <section class="form form--small">
           <div class="form__inner container">
-            <div class="form__box"><a class="form__link link link--send" href="#">Написать нам</a>
+            <div class="form__box"><a class="form__link link link--send js-popup-toggle" href="#">Написать нам</a>
               <div class="form__content">
                 <h2 class="form__title">Написать нам</h2>
                 <form class="form__manage" action="#">
@@ -248,6 +253,64 @@
           </div>
         </div>
       </footer>
+      <div class="popup">
+        <div class="popup__header">
+          <h2 class="popup__title">онлайн заявка</h2><a class="popup__close" href="#"><img src="images/icons/close.svg" alt="закрыть" width="24" height="24"></a>
+        </div>
+        <form class="form__manage" action="#">
+          <ul class="form__list">
+            <li class="form__item">
+              <div class="form__label"><span class="form__label-title">Выберите тип кредита:</span>
+                <select class="form__field credit-list">
+                  <option>Кредит для бизнеса1</option>
+                  <option>Кредит для бизнеса2</option>
+                  <option>Кредит для бизнеса3</option>
+                  <option>Кредит для бизнеса4</option>
+                  <option>Кредит для бизнеса5</option>
+                </select>
+              </div>
+            </li>
+            <li class="form__item">
+              <label class="form__label"><span class="form__label-title">Ваше имя</span>
+                <input class="form__field" type="text">
+              </label>
+            </li>
+            <li class="form__item">
+              <div class="form__label"><span class="form__label-title">Ваш регион проживания:</span>
+                <select class="form__field location-list">
+                  <option>Москва</option>
+                  <option>Санект-Петербург</option>
+                  <option>Краснодар</option>
+                  <option>Челябинск</option>
+                  <option>Ростов-на-Дону</option>
+                </select>
+              </div>
+            </li>
+            <li class="form__item">
+              <label class="form__label"><span class="form__label-title">E-mail (не обязательно)</span>
+                <input class="form__field" type="email">
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label"><span class="form__label-title">Контактный телефон:</span>
+                <input class="form__field phone" type="tel">
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label"><span class="form__label-title">Сумма кредита (руб.)</span>
+                <input class="form__field" type="text">
+              </label>
+            </li>
+          </ul>
+          <div class="form__bottom">
+            <div class="form__footer">
+              <p class="form__about">Нажимая кнопку отправить вы даете согласие на обработку персональных данных в рамках <a href="#">этого соглашения</a>. Для более подробного расчета вашего кредита, просьба связаться с нами по телефону:</p><a class="form__tel" href="tel:+74950213931">+7 (495) 021-39-31</a>
+            </div>
+            <button class="form__btn link">Оставить заявку</button>
+          </div>
+        </form>
+      </div>
+      <div class="popup-overlay"></div>
     </div>
     <script src="js/main.min.js"></script>
   </body>

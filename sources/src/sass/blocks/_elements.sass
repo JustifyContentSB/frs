@@ -23,23 +23,61 @@
    border-radius: 3px
    background: var(--accent)
    overflow: hidden
+   transition: all .2s ease-in-out
    svg
       width: 26px
       height: 26px
+   &:hover,
+   &:focus
+      background: #C82F29
+   &:active
+      background: #AF2722
 
 .link
    padding: 12px 20px
    background: var(--accent)
    border-radius: 3px
+   border: 1px solid var(--accent)
    font-weight: 600
    font-size: 12px
    line-height: 100%
    text-align: center
    color: #fff
+   display: inline-flex
+   justify-content: center
+   align-items: center
+   transition: all .2s ease-in-out
    &--send
       padding: 15px 20px 16px
       font-size: 15px
       width: 100%
+   &:hover,
+   &:focus
+      background: #C82F29
+      border-color: #C82F29
+   &:active
+      background: #AF2722
+      border-color: #AF2722
+   &.link--disable
+      background: #C5C5C5
+      border-color: #C5C5C5
+   &.link--default
+      color: var(--textColor)
+      background: transparent
+      border: 1px solid var(--textColor)
+      &:hover,
+      &:focus
+         background: #C82F29
+         color: #fff
+         border-color: #C82F29
+      &:active
+         background: #AF2722
+         color: #fff
+         border-color: #AF2722
+   &.link--blocked
+      color: #BABABA
+      border: 1px solid#BABABA
+      background: transparent
 
 .title
    font-weight: 700
@@ -60,6 +98,82 @@
       margin-bottom: 16px
       &:last-child
          margin-bottom: 0
+
+.elements
+   padding: 30px var(--padding)
+   display: flex
+   flex-direction: column
+   align-items: flex-start
+   a
+      margin-bottom: 10px
+
+.select2
+   width: 100% !important
+   &-selection
+      width: 100%
+      font-size: 15px
+      font-weight: 400
+      &__placeholder
+         font-weight: 400
+         font-size: 15px
+         line-height: 100%
+         color: #000 !important
+   &-search__field
+      display: none
+   &-results__option--selectable.select2-results__option--highlighted
+      background: var(--bgColor) !important
+      color: #000 !important
+   &-selection--single
+      height: 50px !important
+      border: none !important
+      border-radius: 3px !important
+   &-selection__rendered
+      width: 100%
+      height: 50px !important
+      line-height: 48px !important
+      padding: 0 40px 0 22px !important
+      border-radius: 3px
+      border: 1px solid transparent
+      background: var(--bgColor) !important
+      position: relative
+      transition: all .2s ease-in-out !important
+      &::after
+         content: ''
+         position: absolute
+         right: 10px
+         top: 50%
+         transform: translateY(-50%)
+         width: 24px
+         height: 24px
+         background: url('../images/icons/dropdown-arrow.svg') no-repeat center / contain
+      &:hover,
+      &:focus
+         background: #EEF2F5 !important
+   &-container--open
+      .select2-selection__rendered
+         border: 1px solid #878787
+         background: #EEF2F5 !important
+         &::after
+            transform: translateY(-50%) rotate(180deg)
+   &-selection__arrow
+      display: none
+   &-search--dropdown
+      padding: 0
+   &-dropdown
+      top: 4px
+      border: 1px solid #DADADA
+      border-top: 1px solid #DADADA !important
+      filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1))
+      border-radius: 3px
+   &-results__option
+      height: 36px
+      padding: 6px 22px
+      font-weight: 400
+      font-size: 13px
+      line-height: 25px
+      &:hover,
+      &:focus
+         background: var(--bgColor)
 
 @media screen and (min-width: 1024px)
    .title

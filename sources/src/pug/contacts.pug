@@ -91,23 +91,33 @@ block page
    section.form
       .form__inner.container
          .form__box
-            a.form__link.link.link--send(href="#") Отправить заявку
+            a.form__link.link.link--send.js-popup-toggle(href="#") Отправить заявку
             .form__content
                h2.form__title Заявка на получение кредита для бизнеса
                form.form__manage(action="#")
                   ul.form__list
                      li.form__item
-                        label.form__label
+                        .form__label
                            span.form__label-title Выберите тип кредита:
-                           input.form__field(type="text")
+                           select.form__field.credit-list
+                              option Кредит для бизнеса1
+                              option Кредит для бизнеса2
+                              option Кредит для бизнеса3
+                              option Кредит для бизнеса4
+                              option Кредит для бизнеса5
                      li.form__item
                         label.form__label
                            span.form__label-title Ваше имя
                            input.form__field(type="text")
                      li.form__item
-                        label.form__label
+                        .form__label
                            span.form__label-title Ваш регион проживания:
-                           input.form__field(type="text")
+                           select.form__field.location-list
+                              option Москва
+                              option Санект-Петербург
+                              option Краснодар
+                              option Челябинск
+                              option Ростов-на-Дону
                      li.form__item
                         label.form__label
                            span.form__label-title E-mail (не обязательно)
@@ -115,7 +125,7 @@ block page
                      li.form__item
                         label.form__label
                            span.form__label-title Контактный телефон:
-                           input.form__field(type="tel" value="+7")
+                           input.form__field.phone(type="tel")
                      li.form__item
                         label.form__label
                            span.form__label-title Сумма кредита (руб.)

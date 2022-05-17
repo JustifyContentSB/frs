@@ -5,7 +5,7 @@ html(lang="ru")
     head
         block head
             title PageTitle
-        
+
         meta(charset="utf-8")
         meta(name="keywords" content="")
 
@@ -26,8 +26,9 @@ html(lang="ru")
         meta(name="msapplication-TileImage" content="images/favicons/mstile-144x144.png")
         meta(name="msapplication-config" content="images/favicons/browserconfig.xml")
         meta(name="theme-color" content="#ffffff")
-        
+
         link(rel="stylesheet" href="css/main.min.css")
+        
 
     body
         .wrapper
@@ -39,5 +40,8 @@ html(lang="ru")
 
             block footer
                 include ../blocks/_footer
+
+            block popups
+                include ../blocks/_popups
         block js
             script(src="js/main.min.js")

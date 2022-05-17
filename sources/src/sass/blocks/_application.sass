@@ -18,6 +18,14 @@
       line-height: 100%
       border: 1px solid #fff
       border-radius: 3px
+      transition: all .2s ease-in-out
+      &:hover,
+      &:focus
+         background: #C82F29
+         border-color: #C82F29
+      &:active
+         background: #AF2722
+         border-color: #AF2722
    &__info
       padding: 20px 20px 26px
       width: 100%
@@ -37,7 +45,7 @@
       &::after
          content: ''
          position: absolute
-         right: -65px
+         right: -25px
          top: -33px
          width: 410px
          height: 410px
@@ -74,10 +82,10 @@
    .application
       &__info
          &::after
-            width: 3000px
-            height: 3000px
-            right: -962px
-            top: -80px
+            width: 2000px
+            height: 2000px
+            right: -303px
+            top: -219px
 
 @media screen and (min-width: 768px)
    .application
@@ -101,7 +109,7 @@
          &::after
             width: 1500px
             height: 1500px
-            right: 40px
+            right: 62px
             top: -360px
          &-inner
             max-width: 480px
@@ -133,7 +141,7 @@
             left: -250px
             top: -314px
          &::after
-            right: 115px
+            right: 140px
          &-inner
             max-width: 507px
       &__title
@@ -171,3 +179,5 @@
       &__girl
          width: 500px
          right: -3px
+         img
+            max-width: 494px

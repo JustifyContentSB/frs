@@ -26,8 +26,8 @@ block page
                .vacancy__top(aria-expanded="false")
                   .vacancy__about
                      h2.vacancy__pro Менеджер по продаже кредитных продуктов
-                     a.vacancy__btn(href="#") #[span Развернуть] описание
-                  button.vacancy__toggle
+                     a.vacancy__btn.js-vacancy-toggle(href="#") #[span Развернуть] описание
+                  button.vacancy__toggle.js-vacancy-toggle
                .vacancy__info(aria-hidden="true")
                   .vacancy__info-box
                      h3.vacancy__info-title Мы предлагаем:
@@ -62,8 +62,8 @@ block page
                .vacancy__top(aria-expanded="true")
                   .vacancy__about
                      h2.vacancy__pro Менеджер по продаже кредитных продуктов
-                     a.vacancy__btn(href="#") #[span Развернуть] описание
-                  button.vacancy__toggle
+                     a.vacancy__btn.js-vacancy-toggle(href="#") #[span Развернуть] описание
+                  button.vacancy__toggle.js-vacancy-toggle
                .vacancy__info(aria-hidden="false")
                   .vacancy__info-box
                      h3.vacancy__info-title Мы предлагаем:
@@ -99,7 +99,7 @@ block page
    section.form.form--small
       .form__inner.container
          .form__box
-            a.form__link.link.link--send(href="#") Оставить отклик
+            a.form__link.link.link--send.js-popup-toggle(href="#") Оставить отклик
             .form__content
                h2.form__title Оставить отклик
                form.form__manage(action="#")
@@ -107,7 +107,7 @@ block page
                      li.form__item
                            label.form__label
                               span.form__label-title Контактный телефон:
-                              input.form__field(type="tel" value="+7")
+                              input.form__field.phone(type="tel")
                      li.form__item
                         label.form__label
                            span.form__label-title Ваше имя

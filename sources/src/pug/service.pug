@@ -21,7 +21,7 @@ block page
                   Вы получите решение без приезда в офис. Мы вышлем вам расчет кредита, где будут указаны ставка по кредиту, срок кредита и ежемесячный платеж.
                p.loan__online.
                   Предварительное #[br] одобрение за 15 минут — #[b Онлайн]
-               a.loan__link.link(href="#") Оставить заявку
+               a.loan__link.link.js-popup-toggle(href="#") Оставить заявку
             .loan__img
                img(src="images/loan/loan.png" alt="картинка")
 
@@ -136,7 +136,7 @@ block page
                   h2.application__title Предварительное одобрение #[br] за 15 минут — Онлайн
                   p.application__text.
                      Вы получите решение без приезда в офис. Мы вышлем вам расчет кредита, где будут указаны ставка по кредиту, срок кредита и ежемесячный платеж.
-                  a.application__btn(href="#") Отправить заявку
+                  a.application__btn.js-popup-toggle(href="#") Отправить заявку
             .application__girl
                img(src="images/application/girl.png" alt="девушка" width="241" height="225")
 
@@ -149,17 +149,27 @@ block page
                form.form__manage(action="#")
                   ul.form__list
                      li.form__item
-                        label.form__label
+                        .form__label
                            span.form__label-title Выберите тип кредита:
-                           input.form__field(type="text")
+                           select.form__field.credit-list
+                              option Кредит для бизнеса1
+                              option Кредит для бизнеса2
+                              option Кредит для бизнеса3
+                              option Кредит для бизнеса4
+                              option Кредит для бизнеса5
                      li.form__item
                         label.form__label
                            span.form__label-title Ваше имя
                            input.form__field(type="text")
                      li.form__item
-                        label.form__label
+                        .form__label
                            span.form__label-title Ваш регион проживания:
-                           input.form__field(type="text")
+                           select.form__field.location-list
+                              option Москва
+                              option Санект-Петербург
+                              option Краснодар
+                              option Челябинск
+                              option Ростов-на-Дону
                      li.form__item
                         label.form__label
                            span.form__label-title E-mail (не обязательно)
@@ -167,7 +177,7 @@ block page
                      li.form__item
                         label.form__label
                            span.form__label-title Контактный телефон:
-                           input.form__field(type="tel" value="+7")
+                           input.form__field.phone(type="tel")
                      li.form__item
                         label.form__label
                            span.form__label-title Сумма кредита (руб.)

@@ -29,7 +29,7 @@
       font-weight: 500
       font-size: 12px
       line-height: 120%
-      color: #878787
+      color: var(--secondary)
    &__location
       font-weight: 500
       font-size: 12px
@@ -41,11 +41,18 @@
       font-weight: 300
       font-size: 10px
       line-height: 170%
-      border-bottom: 1px solid #878787
+      border-bottom: 1px solid var(--secondary)
       &-col
          margin-bottom: 12px
          &:last-child
             margin-bottom: 0
+      a
+         transition: color .2s ease
+         &:hover,
+         &:focus
+            color: #E5E5E5
+         &:active
+            opacity: 0.7
    &__bottom
       font-size: 10px
       line-height: 160%
@@ -53,6 +60,13 @@
          margin-bottom: 10px
          &:last-child
             margin-bottom: 0
+      a
+         &:hover,
+         &:focus
+            text-decoration: underline
+         &:active
+            opacity: 0.7
+            text-decoration: none
 
 @media screen and (min-width: 1024px)
    .footer
@@ -73,7 +87,7 @@
          margin-bottom: 24px
          padding-bottom: 43px
          display: flex
-         border-bottom: 1px solid #878787
+         border-bottom: 1px solid var(--secondary)
       &__time
          margin-bottom: 15px
       &__nav
@@ -89,6 +103,25 @@
                margin-right: 36px
                &:last-child
                   margin-right: 0
+            a
+               position: relative
+               &::before
+                  content: ''
+                  width: 0
+                  position: absolute
+                  bottom: 0
+                  left: auto
+                  right: 0
+                  height: 1px
+                  background: #E5E5E5
+                  transition: width .2s ease-in-out
+               &:hover,
+               &:focus
+                  color: #E5E5E5
+                  &::before
+                     width: 100%
+                     left: 0
+                     right: auto
       &__menu
          display: flex
          flex-wrap: wrap

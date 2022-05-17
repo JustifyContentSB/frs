@@ -1,7 +1,12 @@
 .header
    background: #fff
-   position: relative
+   position: fixed
+   top: 0
+   left: 0
+   width: 100%
    z-index: 100
+   &-wrapper
+      min-height: 56px
    &--without
       .header
          &__inner
@@ -17,17 +22,6 @@
       align-items: center
    &__right
       width: calc(100% - 48px)
-   &__burger
-      margin-right: 12px
-      flex-direction: column
-      span
-         width: 16px
-         height: 1px
-         margin-bottom: 5px
-         background: #fff
-         border-radius: 1px
-         &:last-child
-            margin-bottom: 0
    &__logo
       min-width: 150px
       font-weight: 700
@@ -63,7 +57,7 @@
          font-weight: 500
          font-size: 10px
          line-height: 120%
-         color: #878787
+         color: var(--secondary)
    &__user
       display: flex
       align-items: center
@@ -75,19 +69,23 @@
       &--tel
          background: transparent
          border: 1px solid var(--textColor)
+         &:hover,
+         &:focus
+            background: transparent
       &-text
          display: none
    &__bottom
       padding: 14px 30px 30px
       height: calc(100vh - 56px)
-      display: none
       position: fixed
+      transform: translateX(-100%)
       z-index: 10
       top: 56px
       left: 0
       right: 0
       background: #fff
       overflow-y: auto
+      transition: transform .2s ease
       &-contacts
          &--tel
             background: transparent
@@ -100,6 +98,7 @@
          .link
             width: 100%
             padding: 17px 20px
+            min-height: 51px
             font-size: 15px
             font-weight: 600
    &__menu
@@ -112,16 +111,65 @@
          font-size: 12px
          line-height: 100%
          text-transform: uppercase
+         transition: color .2s ease
+         &--bold
+            font-weight: 700
+         &--submenu
+            display: flex
+            justify-content: space-between
+            align-items: center
+            span
+               width: calc(100% - 34px)
+            svg
+               width: 24px
+               height: 24px
+               fill: var(--secondary)
+               transform: rotate(180deg)
+         &:hover,
+         &:focus
+            color: var(--accent)
       &-item
          border-bottom: 1px solid var(--bgColor)
          &:last-child
             border-bottom: none
+         &--active
+            svg
+               transform: rotate(0)
+               fill: var(--accent)
+            .header
+               &__menu
+                  &-submenu
+                     display: block
       &-submenu
+         display: none
          padding-bottom: 16px
          font-weight: 400
          font-size: 13px
          line-height: 200%
          color: var(--textColor)
+         transition: all .2s ease-in-out
+   &__burger
+      margin-right: 12px
+      display: flex
+      justify-content: center
+      align-items: center
+      &-inner
+         width: 16px
+         height: 14px
+         display: flex
+         flex-direction: column
+         justify-content: space-between
+         align-items: center
+         transition: transform .2s ease-in-out
+      &-line
+         width: 16px
+         height: 1px
+         background: #fff
+         border-radius: 1px
+         transform-origin: 0% 0%
+         transition: all .2s ease-in-out
+         &--2
+            transition: transform .2s ease-in-out
    &__inner
       padding: 10px var(--padding)
       display: flex
@@ -150,15 +198,31 @@
             right: 0
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05)
          .header
+            &__burger
+               &-inner
+                  transform: translateX(3px)
+               &-line
+                  &--1
+                     width: 18px
+                     top: 18px
+                     transform: rotate(45deg)
+                  &--2
+                     width: 18px
+                     transform: scaleY(0)
+                  &--3
+                     width: 18px
+                     bottom: 17px
+                     transform: rotate(-45deg)
             &__logo
                display: none
             &__contacts
                display: block
             &__bottom
-               display: block
+               transform: translateX(0)
 
 @media screen and (min-width: 1024px)
    .header
+      position: relative
       &--without
          .header
             &__inner
@@ -196,6 +260,15 @@
          color: #fff
          &--tel
             color: var(--textColor)
+            &:hover,
+            &:focus
+               background: #C82F29
+               color: #fff
+               border-color: #C82F29
+            &:active
+               background: #AF2722
+               color: #fff
+               border-color: #AF2722
          svg
             display: none
          &-text
@@ -235,7 +308,7 @@
             font-weight: 500
             font-size: 12px
          svg
-            fill: #878787
+            fill: var(--secondary)
             width: 26px
             height: 26px
       &__bottom
@@ -244,21 +317,45 @@
          display: block
          height: auto
          overflow-y: visible
+         transform: translateX(0%)
          &-contacts
             display: none
       &__menu
          margin-bottom: 0
          display: flex
-         &-submenu
-            display: none
          &-item
             margin-right: 36px
             border-bottom: none
+            position: relative
             &:last-child
                margin-right: 0
                margin-left: auto
+            &:hover,
+            &:focus
+               .header
+                  &__menu
+                     &-submenu
+                        opacity: 1
+                        visibility: visible
+         &-submenu
+            padding: 20px
+            display: block
+            position: absolute
+            top: 20px
+            left: 0
+            white-space: nowrap
+            background: #fff
+            box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25)
+            border-radius: 10px
+            opacity: 0
+            visibility: hidden
          &-toggle
             padding: 0
+            &--submenu
+               span
+                  width: 100%
+               svg
+                  display: none
 
 @media screen and (min-width: 1366px)
    .header
