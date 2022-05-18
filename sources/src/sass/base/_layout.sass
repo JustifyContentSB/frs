@@ -35,8 +35,7 @@ body
     font-weight: 300
     font-size: 11px
     line-height: 145%
-    &.no-scroll
-        overflow: hidden
+    position: relative
     @media screen and (min-width: 1024px)
         font-size: 12px
         line-height: 167%
@@ -46,6 +45,11 @@ body
     @media screen and (min-width: 1600px)
         font-size: 15px
         line-height: 173%
+
+.no-scroll
+    overflow: hidden
+    position: relative
+    height: 100%
 
 .visually-hidden:not(:focus):not(:active)
     position: absolute

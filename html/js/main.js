@@ -9,6 +9,7 @@ $(document).ready(function () {
   popupShow();
   popupClose();
   overlayClose();
+  selectedItems();
 }); // Your functions here
 
 function financeSlider() {
@@ -44,6 +45,7 @@ function popupShow() {
     $('.popup').addClass('popup--active');
     $('.popup-overlay').addClass('popup-overlay--active');
     $('body').addClass('no-scroll');
+    $('html').addClass('no-scroll');
     $(header).removeClass('header__inner--active');
   });
 }
@@ -54,6 +56,7 @@ function popupClose() {
     $(this).parent('.popup__header').parent('.popup').removeClass('popup--active');
     $('.popup-overlay').removeClass('popup-overlay--active');
     $('body').removeClass('no-scroll');
+    $('html').removeClass('no-scroll');
   });
 }
 
@@ -62,6 +65,7 @@ function overlayClose() {
     $(this).removeClass('popup-overlay--active');
     $('.popup').removeClass('popup--active');
     $('body').removeClass('no-scroll');
+    $('html').removeClass('no-scroll');
   });
 }
 
@@ -75,27 +79,28 @@ function featuresSlider() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var accordions = document.querySelectorAll('.vacancy__item');
+  var accordions = document.querySelectorAll('.js-vacancy-toggle');
   accordions.forEach(function (el) {
     el.addEventListener('click', function (e) {
+      e.preventDefault();
       var self = e.currentTarget;
-      var control = self.querySelector('.vacancy__top');
-      var content = self.querySelector('.vacancy__info');
+      var control = self.closest('.vacancy__item').querySelector('.vacancy__top');
+      var content = self.closest('.vacancy__item').querySelector('.vacancy__info');
 
-      if (self.classList.contains('vacancy__item--open')) {
+      if (self.closest('.vacancy__item').classList.contains('vacancy__item--open')) {
         accordions.forEach(function (elem) {
-          elem.classList.remove('vacancy__item--open');
-          elem.querySelector('.vacancy__info').style.maxHeight = null;
+          elem.closest('.vacancy__item').classList.remove('vacancy__item--open');
+          elem.closest('.vacancy__item').querySelector('.vacancy__info').style.maxHeight = null;
         });
       } else {
         accordions.forEach(function (elem) {
-          elem.classList.remove('vacancy__item--open');
-          elem.querySelector('.vacancy__info').style.maxHeight = null;
+          elem.closest('.vacancy__item').classList.remove('vacancy__item--open');
+          elem.closest('.vacancy__item').querySelector('.vacancy__info').style.maxHeight = null;
         });
-        self.classList.add('vacancy__item--open');
+        self.closest('.vacancy__item').classList.add('vacancy__item--open');
       }
 
-      if (self.classList.contains('vacancy__item--open')) {
+      if (self.closest('.vacancy__item').classList.contains('vacancy__item--open')) {
         control.setAttribute('aria-expanded', true);
         content.setAttribute('aria-hidden', false);
         content.style.maxHeight = content.scrollHeight + 'px';
@@ -105,54 +110,17 @@ document.addEventListener('DOMContentLoaded', function () {
         content.style.maxHeight = null;
       }
     });
-    $('.vacancy__btn').on('click', function (e) {
-      e.preventDefault();
-    });
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
-  var accordions = document.querySelectorAll('.vacancy__item');
-  accordions.forEach(function (el) {
-    var self = accordions.currentTarget;
-    var control = self.querySelector('.vacancy__top');
-    var content = self.querySelector('.vacancy__info');
-    $('.js-vacancy-toggle').on('click', function (e) {
-      e.preventDefault();
 
-      if (self.classList.contains('vacancy__item--open')) {
-        accordions.forEach(function (elem) {
-          elem.classList.remove('vacancy__item--open');
-          elem.querySelector('.vacancy__info').style.maxHeight = null;
-        });
-      } else {
-        accordions.forEach(function (elem) {
-          elem.classList.remove('vacancy__item--open');
-          elem.querySelector('.vacancy__info').style.maxHeight = null;
-        });
-        self.classList.add('vacancy__item--open');
-      }
-
-      if (self.classList.contains('vacancy__item--open')) {
-        control.setAttribute('aria-expanded', true);
-        content.setAttribute('aria-hidden', false);
-        content.style.maxHeight = content.scrollHeight + 'px';
-      } else {
-        control.setAttribute('aria-expanded', false);
-        content.setAttribute('aria-hidden', true);
-        content.style.maxHeight = null;
-      }
-    });
-    $('.vacancy__btn').on('click', function (e) {
-      e.preventDefault();
-    });
+function selectedItems() {
+  $('.credit-list').select2({
+    placeholder: 'Выберите тип кредита:'
   });
-});
-$('.credit-list').select2({
-  placeholder: 'Выберите тип кредита:'
-});
-$('.location-list').select2({
-  placeholder: 'Ваш регион проживания:'
-});
+  $('.location-list').select2({
+    placeholder: 'Ваш регион проживания:'
+  });
+}
 
 function maskFunc() {
   var elements = document.querySelectorAll('.phone');
